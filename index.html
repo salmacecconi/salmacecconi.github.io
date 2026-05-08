@@ -16,588 +16,171 @@
   --ink-light: #7A6E65;
   --accent: #1B4B8A;
   --accent-light: #E8EFF8;
-  --accent-mid: #3A6BAF;
   --teal: #1D6B5A;
   --teal-light: #E6F3EF;
   --amber: #8B5E1A;
-  --amber-light: #FBF0E0;
   --rule: rgba(26,22,18,0.12);
 }
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); font-size: 16px; line-height: 1.7; overflow-x: hidden; }
 
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--cream);
-  color: var(--ink);
-  font-size: 16px;
-  line-height: 1.7;
-  overflow-x: hidden;
-}
-
-/* ── NAV ── */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  background: rgba(245,240,232,0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 0.5px solid var(--rule);
-  padding: 0 2rem;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.nav-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--ink);
-  text-decoration: none;
-}
-.nav-links {
-  display: flex;
-  gap: 1.75rem;
-  list-style: none;
-}
-.nav-links a {
-  font-size: 13px;
-  font-weight: 400;
-  color: var(--ink-light);
-  text-decoration: none;
-  letter-spacing: 0.02em;
-  transition: color 0.2s;
-}
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(245,240,232,0.92); backdrop-filter: blur(12px); border-bottom: 0.5px solid var(--rule); padding: 0 2rem; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+.nav-name { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; color: var(--ink); text-decoration: none; }
+.nav-links { display: flex; gap: 1.75rem; list-style: none; }
+.nav-links a { font-size: 13px; color: var(--ink-light); text-decoration: none; letter-spacing: 0.02em; transition: color 0.2s; }
 .nav-links a:hover { color: var(--ink); }
 
-/* ── HERO ── */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 8rem 2rem 4rem;
-  max-width: 900px;
-  margin: 0 auto;
-  position: relative;
-}
-.hero-eyebrow {
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ink-light);
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.hero-eyebrow::before {
-  content: '';
-  display: inline-block;
-  width: 32px;
-  height: 1px;
-  background: var(--ink-light);
-}
-.hero-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(48px, 8vw, 88px);
-  font-weight: 700;
-  line-height: 1.0;
-  color: var(--ink);
-  margin-bottom: 0.5rem;
-}
-.hero-title em {
-  font-style: italic;
-  font-weight: 400;
-  color: var(--accent);
-}
-.hero-title .last {
-  display: block;
-  font-size: clamp(36px, 6vw, 66px);
-  color: var(--ink-mid);
-  font-weight: 400;
-}
-.hero-sub {
-  font-size: 18px;
-  font-weight: 300;
-  color: var(--ink-mid);
-  max-width: 520px;
-  margin: 2rem 0 2.5rem;
-  line-height: 1.7;
-}
+/* HERO */
+.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 8rem 2rem 4rem; max-width: 900px; margin: 0 auto; position: relative; }
+.hero-eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 10px; }
+.hero-eyebrow::before { content: ''; display: inline-block; width: 32px; height: 1px; background: var(--ink-light); }
+.hero-title { font-family: 'Playfair Display', serif; font-size: clamp(48px, 8vw, 88px); font-weight: 700; line-height: 1.0; color: var(--ink); margin-bottom: 0.5rem; }
+.hero-title em { font-style: italic; font-weight: 400; color: var(--accent); }
+.hero-title .last { display: block; font-size: clamp(36px, 6vw, 66px); color: var(--ink-mid); font-weight: 400; }
+.hero-sub { font-size: 18px; font-weight: 300; color: var(--ink-mid); max-width: 520px; margin: 2rem 0 2.5rem; line-height: 1.7; }
 .hero-sub strong { font-weight: 500; color: var(--ink); }
-.hero-cta {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.2s;
-  letter-spacing: 0.01em;
-}
-.btn-primary {
-  background: var(--accent);
-  color: #fff;
-  border: 1.5px solid var(--accent);
-}
-.btn-primary:hover { background: #153d74; border-color: #153d74; }
-.btn-outline {
-  background: transparent;
-  color: var(--ink);
-  border: 1.5px solid var(--rule);
-}
+.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 4px; font-size: 14px; font-weight: 500; text-decoration: none; transition: all 0.2s; letter-spacing: 0.01em; }
+.btn-primary { background: var(--accent); color: #fff; border: 1.5px solid var(--accent); }
+.btn-primary:hover { background: #153d74; }
+.btn-outline { background: transparent; color: var(--ink); border: 1.5px solid var(--rule); }
 .btn-outline:hover { border-color: var(--ink-mid); background: var(--cream-dark); }
+.hero-scroll { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--ink-light); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; animation: bounce 2s infinite; }
+@keyframes bounce { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
 
-.hero-scroll {
-  position: absolute;
-  bottom: 2.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  color: var(--ink-light);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  animation: bounce 2s infinite;
-}
-.hero-scroll svg { opacity: 0.5; }
-@keyframes bounce {
-  0%,100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(6px); }
-}
+/* SECTIONS */
+section { max-width: 900px; margin: 0 auto; padding: 5rem 2rem; }
+.section-header { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 3rem; }
+.section-num { font-family: 'Playfair Display', serif; font-size: 13px; color: var(--ink-light); font-style: italic; }
+.section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 38px); font-weight: 600; color: var(--ink); line-height: 1.15; }
+.section-rule { flex: 1; height: 0.5px; background: var(--rule); }
 
-/* ── SECTIONS ── */
-section {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 5rem 2rem;
-}
-.section-header {
-  display: flex;
-  align-items: baseline;
-  gap: 1rem;
-  margin-bottom: 3rem;
-}
-.section-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 13px;
-  color: var(--ink-light);
-  font-style: italic;
-}
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(28px, 4vw, 38px);
-  font-weight: 600;
-  color: var(--ink);
-  line-height: 1.15;
-}
-.section-rule {
-  flex: 1;
-  height: 0.5px;
-  background: var(--rule);
-}
-
-/* ── SOBRE ── */
-.sobre-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
-}
-.sobre-text p {
-  font-size: 16px;
-  font-weight: 300;
-  color: var(--ink-mid);
-  line-height: 1.8;
-  margin-bottom: 1.25rem;
-}
+/* SOBRE */
+.sobre-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.sobre-text p { font-size: 16px; font-weight: 300; color: var(--ink-mid); line-height: 1.8; margin-bottom: 1.25rem; }
 .sobre-text p strong { font-weight: 500; color: var(--ink); }
-.sobre-text blockquote {
-  border-left: 3px solid var(--accent);
-  padding-left: 1.25rem;
-  margin: 2rem 0;
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 18px;
-  color: var(--ink);
-  line-height: 1.6;
-}
+.sobre-text blockquote { border-left: 3px solid var(--accent); padding-left: 1.25rem; margin: 2rem 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 18px; color: var(--ink); line-height: 1.6; }
 .sobre-facts { display: flex; flex-direction: column; gap: 1.5rem; }
-.fact-item {
-  padding: 1.25rem;
-  background: white;
-  border-radius: 6px;
-  border: 0.5px solid var(--rule);
-  border-left: 3px solid var(--accent);
-}
+.fact-item { padding: 1.25rem; background: white; border-radius: 6px; border: 0.5px solid var(--rule); border-left: 3px solid var(--accent); }
 .fact-item.teal { border-left-color: var(--teal); }
 .fact-item.amber { border-left-color: var(--amber); }
-.fact-label {
-  font-size: 10px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--ink-light);
-  margin-bottom: 4px;
-}
-.fact-value {
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--ink);
-}
-.fact-sub {
-  font-size: 13px;
-  color: var(--ink-light);
-  margin-top: 2px;
-}
+.fact-label { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-light); margin-bottom: 4px; }
+.fact-value { font-size: 15px; font-weight: 500; color: var(--ink); }
+.fact-sub { font-size: 13px; color: var(--ink-light); margin-top: 2px; }
 
-/* ── EXPERIÊNCIAS ── */
-.exp-list { display: flex; flex-direction: column; gap: 0; }
-.exp-item {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 2rem;
-  padding: 2.5rem 0;
-  border-bottom: 0.5px solid var(--rule);
-}
+/* EXPERIÊNCIAS */
+.exp-list { display: flex; flex-direction: column; }
+.exp-item { display: grid; grid-template-columns: 180px 1fr; gap: 2rem; padding: 2.5rem 0; border-bottom: 0.5px solid var(--rule); }
 .exp-item:first-child { border-top: 0.5px solid var(--rule); }
 .exp-meta { padding-top: 4px; }
-.exp-date {
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--ink-light);
-  margin-bottom: 4px;
-  letter-spacing: 0.02em;
-}
-.exp-status {
-  display: inline-block;
-  font-size: 10px;
-  font-weight: 500;
-  padding: 2px 8px;
-  border-radius: 20px;
-  background: var(--accent-light);
-  color: var(--accent);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
+.exp-date { font-size: 12px; font-weight: 500; color: var(--ink-light); margin-bottom: 4px; }
+.exp-status { display: inline-block; font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 20px; background: var(--accent-light); color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase; }
 .exp-status.teal { background: var(--teal-light); color: var(--teal); }
-.exp-content {}
-.exp-company {
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--ink);
-  margin-bottom: 2px;
-}
-.exp-role {
-  font-size: 13px;
-  color: var(--ink-light);
-  margin-bottom: 12px;
-}
-.exp-desc {
-  font-size: 15px;
-  font-weight: 300;
-  color: var(--ink-mid);
-  line-height: 1.75;
-  margin-bottom: 14px;
-}
+.exp-company { font-size: 20px; font-weight: 500; color: var(--ink); margin-bottom: 2px; }
+.exp-role { font-size: 13px; color: var(--ink-light); margin-bottom: 12px; }
+.exp-desc { font-size: 15px; font-weight: 300; color: var(--ink-mid); line-height: 1.75; margin-bottom: 14px; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.tag {
-  font-size: 11px;
-  padding: 4px 10px;
-  border-radius: 20px;
-  background: var(--cream-dark);
-  color: var(--ink-mid);
-  border: 0.5px solid var(--rule);
-  font-weight: 400;
-}
+.tag { font-size: 11px; padding: 4px 10px; border-radius: 20px; background: var(--cream-dark); color: var(--ink-mid); border: 0.5px solid var(--rule); }
 
-/* ── DESTAQUE IC ── */
-.ic-card {
-  background: white;
-  border-radius: 8px;
-  border: 0.5px solid var(--rule);
-  border-top: 3px solid var(--teal);
-  padding: 2rem;
-  margin-top: 2.5rem;
-}
-.ic-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 11px;
-  font-weight: 500;
-  padding: 4px 12px;
-  background: var(--teal-light);
-  color: var(--teal);
-  border-radius: 20px;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-}
-.ic-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 8px;
-  line-height: 1.3;
-}
-.ic-pub {
-  font-size: 13px;
-  color: var(--teal);
-  font-weight: 500;
-  margin-bottom: 12px;
-}
-.ic-desc {
-  font-size: 15px;
-  font-weight: 300;
-  color: var(--ink-mid);
-  line-height: 1.75;
-}
+/* IC */
+.ic-card { background: white; border-radius: 8px; border: 0.5px solid var(--rule); border-top: 3px solid var(--teal); padding: 2rem; margin-top: 2.5rem; }
+.ic-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; padding: 4px 12px; background: var(--teal-light); color: var(--teal); border-radius: 20px; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.07em; }
+.ic-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; color: var(--ink); margin-bottom: 8px; line-height: 1.3; }
+.ic-pub { font-size: 13px; color: var(--teal); font-weight: 500; margin-bottom: 12px; }
+.ic-desc { font-size: 15px; font-weight: 300; color: var(--ink-mid); line-height: 1.75; }
 
-/* ── PROJETOS ── */
-.proj-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-.proj-card {
-  background: white;
-  border-radius: 8px;
-  border: 0.5px solid var(--rule);
-  padding: 1.75rem;
-  transition: transform 0.2s, box-shadow 0.2s;
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-.proj-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(26,22,18,0.08);
-}
-.proj-type {
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ink-light);
-  margin-bottom: 12px;
-}
-.proj-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 10px;
-  line-height: 1.25;
-}
-.proj-desc {
-  font-size: 14px;
-  font-weight: 300;
-  color: var(--ink-mid);
-  line-height: 1.7;
-  margin-bottom: 1rem;
-}
-.proj-link {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--accent);
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
+/* PROJETOS */
+.proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.proj-card { background: white; border-radius: 8px; border: 0.5px solid var(--rule); padding: 1.75rem; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+.proj-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(26,22,18,0.08); }
+.proj-type { font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 12px; }
+.proj-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; color: var(--ink); margin-bottom: 10px; line-height: 1.25; }
+.proj-desc { font-size: 14px; font-weight: 300; color: var(--ink-mid); line-height: 1.7; margin-bottom: 1rem; flex: 1; }
+.proj-link { font-size: 13px; font-weight: 500; color: var(--accent); margin-top: auto; }
 
-/* ── HABILIDADES ── */
-.skills-wrap {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-}
-.skill-group {}
-.skill-group-title {
-  font-size: 11px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--ink-light);
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 0.5px solid var(--rule);
-}
+/* HABILIDADES */
+.skills-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+.skill-group-title { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-light); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 0.5px solid var(--rule); }
 .skill-list { list-style: none; }
-.skill-list li {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--ink-mid);
-  padding: 5px 0;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.skill-list li::before {
-  content: '';
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--accent);
-  flex-shrink: 0;
-}
+.skill-list li { font-size: 14px; color: var(--ink-mid); padding: 5px 0; display: flex; align-items: center; gap: 8px; }
+.skill-list li::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
 
-/* ── FORMAÇÃO ── */
-.edu-list { display: flex; flex-direction: column; gap: 0; }
-.edu-item {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 2rem;
-  padding: 1.75rem 0;
-  border-bottom: 0.5px solid var(--rule);
-}
+/* FORMAÇÃO */
+.edu-list { display: flex; flex-direction: column; }
+.edu-item { display: grid; grid-template-columns: 180px 1fr; gap: 2rem; padding: 1.75rem 0; border-bottom: 0.5px solid var(--rule); }
 .edu-item:first-child { border-top: 0.5px solid var(--rule); }
 .edu-year { font-size: 13px; color: var(--ink-light); padding-top: 3px; }
 .edu-name { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 2px; }
 .edu-inst { font-size: 13px; color: var(--ink-light); }
 
-/* ── TEXTOS PUBLICADOS ── */
-.clips-list { display: flex; flex-direction: column; gap: 0; }
-.clip-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 1.25rem 0;
-  border-bottom: 0.5px solid var(--rule);
-  text-decoration: none;
-  color: inherit;
-  transition: padding-left 0.2s;
-}
+/* TEXTOS */
+.clips-list { display: flex; flex-direction: column; }
+.clip-item { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; padding: 1.25rem 0; border-bottom: 0.5px solid var(--rule); cursor: pointer; transition: padding-left 0.2s; }
 .clip-item:first-child { border-top: 0.5px solid var(--rule); }
 .clip-item:hover { padding-left: 8px; }
-.clip-title { font-size: 15px; font-weight: 400; color: var(--ink); line-height: 1.4; }
-.clip-source { font-size: 12px; color: var(--ink-light); white-space: nowrap; }
-.clips-more {
-  margin-top: 1.5rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--accent);
-  text-decoration: none;
-}
+.clip-left { flex: 1; }
+.clip-title { font-size: 15px; font-weight: 400; color: var(--ink); line-height: 1.4; margin-bottom: 4px; }
+.clip-excerpt { font-size: 13px; color: var(--ink-light); line-height: 1.5; font-weight: 300; }
+.clip-right { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex-shrink: 0; }
+.clip-source { font-size: 11px; color: var(--ink-light); white-space: nowrap; }
+.clip-read { font-size: 12px; font-weight: 500; color: var(--accent); white-space: nowrap; }
+.clips-more { margin-top: 1.5rem; display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--accent); text-decoration: none; }
 .clips-more:hover { text-decoration: underline; }
 
-/* ── CONTATO ── */
-.contact-section {
-  background: var(--ink);
-  color: var(--cream);
-}
-.contact-section .section-title { color: var(--cream); }
-.contact-section .section-num { color: rgba(245,240,232,0.4); }
-.contact-section .section-rule { background: rgba(245,240,232,0.1); }
-.contact-inner {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 5rem 2rem;
-}
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  margin-top: 3rem;
-}
-.contact-blurb {
-  font-size: 17px;
-  font-weight: 300;
-  color: rgba(245,240,232,0.75);
-  line-height: 1.8;
-}
+/* MODAL */
+.modal-overlay { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(26,22,18,0.6); backdrop-filter: blur(4px); justify-content: center; align-items: flex-start; padding: 2rem 1rem; overflow-y: auto; }
+.modal-overlay.open { display: flex; }
+.modal { background: var(--cream); max-width: 720px; width: 100%; border-radius: 8px; padding: 3rem; position: relative; margin: auto; }
+.modal-close { position: absolute; top: 1.25rem; right: 1.25rem; background: none; border: 0.5px solid var(--rule); width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 20px; color: var(--ink-light); display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+.modal-close:hover { background: var(--cream-dark); }
+.modal-meta { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-light); margin-bottom: 0.75rem; }
+.modal-title { font-family: 'Playfair Display', serif; font-size: clamp(20px, 3vw, 28px); font-weight: 700; color: var(--ink); margin-bottom: 0.5rem; line-height: 1.2; }
+.modal-author { font-size: 13px; color: var(--ink-light); margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 0.5px solid var(--rule); }
+.modal-body { font-size: 16px; font-weight: 300; color: var(--ink-mid); line-height: 1.85; }
+.modal-body p { margin-bottom: 1.25rem; }
+.modal-body h3 { font-size: 15px; font-weight: 500; color: var(--ink); margin: 1.5rem 0 0.5rem; }
+
+/* CONTATO */
+.contact-section { background: var(--ink); color: var(--cream); }
+.contact-inner { max-width: 900px; margin: 0 auto; padding: 5rem 2rem; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; }
+.contact-blurb { font-size: 17px; font-weight: 300; color: rgba(245,240,232,0.75); line-height: 1.8; }
 .contact-blurb strong { font-weight: 500; color: var(--cream); }
 .contact-links { display: flex; flex-direction: column; gap: 1rem; }
-.contact-link {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: var(--cream);
-  font-size: 15px;
-  padding: 1rem 1.25rem;
-  border-radius: 6px;
-  border: 0.5px solid rgba(245,240,232,0.15);
-  transition: background 0.2s;
-}
+.contact-link { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--cream); padding: 1rem 1.25rem; border-radius: 6px; border: 0.5px solid rgba(245,240,232,0.15); transition: background 0.2s; }
 .contact-link:hover { background: rgba(245,240,232,0.07); }
-.contact-link-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(245,240,232,0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
+.contact-link-icon { width: 36px; height: 36px; border-radius: 50%; background: rgba(245,240,232,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .contact-link-icon svg { width: 16px; height: 16px; stroke: var(--cream); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .contact-link-label { font-size: 11px; color: rgba(245,240,232,0.45); display: block; margin-bottom: 1px; }
-.contact-link-value { font-size: 14px; font-weight: 400; }
+.contact-link-value { font-size: 14px; }
 
-/* ── FOOTER ── */
-footer {
-  background: var(--ink);
-  border-top: 0.5px solid rgba(245,240,232,0.1);
-  padding: 1.5rem 2rem;
-  text-align: center;
-}
-footer p {
-  font-size: 12px;
-  color: rgba(245,240,232,0.3);
-}
+footer { background: var(--ink); border-top: 0.5px solid rgba(245,240,232,0.1); padding: 1.5rem 2rem; text-align: center; }
+footer p { font-size: 12px; color: rgba(245,240,232,0.3); }
 
-/* ── ANIMATIONS ── */
-.fade-up {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* ANIMATIONS */
+.fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
 
-/* ── RESPONSIVE ── */
+/* RESPONSIVE */
 @media (max-width: 640px) {
   nav { padding: 0 1.25rem; }
-  .nav-links { gap: 1.25rem; }
-  .nav-links li:nth-child(n+3) { display: none; }
+  .nav-links { gap: 1rem; }
+  .nav-links li:nth-child(n+4) { display: none; }
   section { padding: 3.5rem 1.25rem; }
   .hero { padding: 7rem 1.25rem 3rem; }
-  .sobre-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
-  .edu-item { grid-template-columns: 1fr; gap: 0.25rem; }
-  .proj-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .sobre-grid, .proj-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .exp-item, .edu-item { grid-template-columns: 1fr; gap: 0.5rem; }
   .hero-title { font-size: 44px; }
   .hero-title .last { font-size: 34px; }
+  .modal { padding: 2rem 1.25rem; }
+  .clip-excerpt { display: none; }
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a class="nav-name" href="#hero">Salma Catherine</a>
   <ul class="nav-links">
@@ -610,7 +193,7 @@ footer p {
 </nav>
 
 <!-- HERO -->
-<section id="hero" class="hero" style="padding-top:8rem;max-width:900px">
+<section id="hero" class="hero" style="max-width:900px">
   <div class="hero-eyebrow">Portfólio · Jornalismo · 2026</div>
   <h1 class="hero-title">
     Salma <em>Catherine</em>
@@ -643,7 +226,7 @@ footer p {
       <p>Sou estudante de Jornalismo na <strong>Universidade São Judas Tadeu</strong> (6º semestre), com interesse especial por temas internacionais, economia, geopolítica, direitos humanos e cultura.</p>
       <p>Antes do jornalismo, cursei <strong>Estilismo e Coordenação de Moda</strong> no SENAC — o que me deu repertório sobre comportamento, estética e tendências culturais. Mas, quando entrei para o jornalismo, percebi que aqui sempre foi meu lugar.</p>
       <blockquote>"O jornalismo me escolheu, e eu realmente me apaixonei por ele."</blockquote>
-      <p>Tenho <strong>inglês avançado</strong>, domínio em produção de conteúdo multimídia, WordPress, SEO e edição de vídeo.</p>
+      <p>Tenho <strong>inglês avançado</strong>, domínio em produção de conteúdo multimídia, WordPress, SEO e edição de vídeo. Sou curiosa por natureza, empática com as fontes e comprometida com a verificação.</p>
     </div>
     <div class="sobre-facts">
       <div class="fact-item">
@@ -654,7 +237,7 @@ footer p {
       <div class="fact-item teal">
         <div class="fact-label">Localização</div>
         <div class="fact-value">São Bernardo do Campo, SP</div>
-        <div class="fact-sub">Disponível para São Paulo e Grande ABC</div>
+        <div class="fact-sub">Disponível para São Paulo, Grande ABC e remoto</div>
       </div>
       <div class="fact-item amber">
         <div class="fact-label">Idiomas</div>
@@ -687,16 +270,15 @@ footer p {
         <div class="exp-content">
           <div class="exp-company">Vervi Assessoria de Imprensa</div>
           <div class="exp-role">Estagiária de Jornalismo · São Paulo, presencial</div>
-          <div class="exp-desc">Redação de releases, notas e artigos para diferentes públicos e formatos. Criação de roteiros e acompanhamento das gravações do podcast <em>Comunicação É Tudo</em>. Cobertura de eventos corporativos de grande porte (FEIMEC, EXPOSEC, InterSolar), clipping, elaboração de relatórios e produção de conteúdo para redes sociais.</div>
+          <div class="exp-desc">Redação de releases, notas e artigos para diferentes públicos e formatos. Criação de roteiros e acompanhamento das gravações do podcast <em>Comunicação É Tudo</em>. Cobertura de eventos corporativos de grande porte (FEIMEC, EXPOSEC, InterSolar), clipping, elaboração de relatórios e produção de conteúdo para redes sociais e YouTube.</div>
           <div class="tags">
             <span class="tag">Assessoria de imprensa</span>
             <span class="tag">Releases e notas</span>
             <span class="tag">Podcast</span>
             <span class="tag">Cobertura de eventos</span>
             <span class="tag">Clipping</span>
-            <span class="tag">Redes sociais</span>
             <span class="tag">Instagram</span>
-            <span class="tag">Youtube</span>
+            <span class="tag">YouTube</span>
             <span class="tag">Comunicação institucional</span>
           </div>
         </div>
@@ -709,7 +291,7 @@ footer p {
         <div class="exp-content">
           <div class="exp-company">AppNews Delivery</div>
           <div class="exp-role">Jornalista digital · Global, remoto</div>
-          <div class="exp-desc">Curadoria e produção de conteúdo jornalístico em aplicativo global de notícias em tempo real. Foco em agilidade, precisão e construção de títulos com lógica de SEO. Publicação de hard news e notícias frias em múltiplas editorias (Economia, Internacional, Agronegócio, Cotidiano, Nacional, etc.).</div>
+          <div class="exp-desc">Curadoria e produção de conteúdo jornalístico em aplicativo global de notícias em tempo real. Foco em agilidade, precisão e construção de títulos com lógica de SEO. Publicação de hard news e notícias frias em múltiplas editorias (Economia, Internacional, Agronegócio, Cotidiano, Nacional, entre outras).</div>
           <div class="tags">
             <span class="tag">Hard news</span>
             <span class="tag">SEO editorial</span>
@@ -726,7 +308,7 @@ footer p {
         <div class="exp-content">
           <div class="exp-company">Linda Menina Boutique</div>
           <div class="exp-role">SAC e produção de conteúdo · São Bernardo do Campo</div>
-          <div class="exp-desc">Primeira experiência profissional. Atendimento ao cliente e suporte online. Produção de conteúdo para redes sociais, aprendizado em marketing orgânico e comunicação com o público. Treinada por especialista em mídias sociais.</div>
+          <div class="exp-desc">Primeira experiência profissional. Atendimento ao cliente e suporte online. Produção de conteúdo para redes sociais e marketing orgânico. Treinada por especialista em mídias sociais.</div>
           <div class="tags">
             <span class="tag">Atendimento ao cliente</span>
             <span class="tag">Redes sociais</span>
@@ -736,15 +318,14 @@ footer p {
       </div>
     </div>
 
-    <!-- IC DESTAQUE -->
     <div class="ic-card fade-up">
       <div class="ic-badge">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
         Destaque · Iniciação Científica
       </div>
       <div class="ic-title">"Paz ou Conflito? Como o jornalismo narra processos de imigração e refúgio"</div>
-      <div class="ic-pub">✦ Resumo expandido do artigo aprovado para apresentação e publicação no IV Simpósio de Pesquisa do Ecossistema Ânima</div>
-      <div class="ic-desc">Pesquisa que investiga a cobertura midiática da Agência Brasil sob o tema de 'refúgio' sob a ótica dos direitos humanos e do jornalismo para a Paz. Artigo: <em>"Cobertura jornalística para a Paz: migrações, refúgio e crises humanitárias na Agência Brasil (2024–2025)"</em> — análise de reportagens à luz do jornalismo para a Paz ou do jornalismo de guerra.</div>
+      <div class="ic-pub">✦ Resumo expandido aprovado para apresentação e publicação no IV Simpósio de Pesquisa do Ecossistema Ânima</div>
+      <div class="ic-desc">Pesquisa que investiga a cobertura midiática da Agência Brasil sobre refúgio sob a ótica dos direitos humanos e do jornalismo para a Paz. Artigo: <em>"Cobertura jornalística para a Paz: migrações, refúgio e crises humanitárias na Agência Brasil (2024–2025)"</em> — análise à luz do jornalismo para a Paz ou do jornalismo de guerra.</div>
     </div>
   </div>
 </section>
@@ -763,21 +344,22 @@ footer p {
       <div class="proj-desc">Publicação digital trimestral voltada à Geração Z. Foco em cultura jovem, arte independente, moda autoral e comportamento no centro expandido de São Paulo. Reportagens, entrevistas e narrativas autorais.</div>
       <div class="proj-link">Ler a revista →</div>
     </a>
-    <div class="proj-card fade-up">
+    <a class="proj-card fade-up" href="https://www.youtube.com/watch?v=SzAwSbJR1n4" target="_blank">
       <div class="proj-type">Documentário · Editora responsável</div>
       <div class="proj-name">Nada Sobre Nós Sem Nós</div>
       <div class="proj-desc">Documentário sobre o movimento de pessoas com deficiência em Cachoeiro de Itapemirim (ES). Produzido com equipe geograficamente distribuída. Inclui versão com Libras e audiodescrição.</div>
-      <div class="tags" style="margin-top:auto">
+      <div class="tags" style="margin-bottom:1rem">
         <span class="tag">Edição de vídeo</span>
         <span class="tag">Acessibilidade</span>
         <span class="tag">Libras</span>
       </div>
-    </div>
+      <div class="proj-link">Assistir no YouTube →</div>
+    </a>
     <div class="proj-card fade-up">
       <div class="proj-type">Cobertura jornalística · A3 USJT 2026</div>
       <div class="proj-name">O Impacto da China na Economia Brasileira</div>
-      <div class="proj-desc">Atual trabalho em cobertura multiplataforma sobre a relação econômica Brasil-China. Inclui reportagem aprofundada, apuração de campo na FEIMEC 2026, Reels para Instagram e thread para o X.</div>
-      <div class="tags" style="margin-top:auto">
+      <div class="proj-desc">Cobertura multiplataforma sobre a relação econômica Brasil-China. Apuração de campo na FEIMEC 2026, reportagem aprofundada, Reels para Instagram e thread para o X.</div>
+      <div class="tags">
         <span class="tag">Multiplataforma</span>
         <span class="tag">Economia</span>
         <span class="tag">Internacional</span>
@@ -787,7 +369,7 @@ footer p {
     <a class="proj-card fade-up" href="https://www.clippings.me/users/salmacatherine" target="_blank">
       <div class="proj-type">Portfólio completo</div>
       <div class="proj-name">Clippings & Textos Publicados</div>
-      <div class="proj-desc">Acervo de textos publicados nas experiências profissionais e acadêmicas: artigos, releases, matérias e notas. Disponível no portfólio.</div>
+      <div class="proj-desc">Acervo de textos publicados nas experiências profissionais e acadêmicas: artigos, releases, matérias e notas.</div>
       <div class="proj-link">Ver portfólio →</div>
     </a>
   </div>
@@ -803,45 +385,48 @@ footer p {
     </div>
     <div class="skills-wrap fade-up">
       <div class="skill-group">
-        <div class="skill-group-title">Redação jornalística</div>
+        <div class="skill-group-title">Redação & apuração</div>
         <ul class="skill-list">
           <li>Hard news e notícias frias</li>
           <li>Releases e notas à imprensa</li>
-          <li>Artigos e reportagens</li>
-          <li>Titulos com SEO</li>
-          <li>Textos para diferentes públicos</li>
+          <li>Artigos de opinião</li>
+          <li>Reportagens e entrevistas</li>
+          <li>Títulos com SEO</li>
+          <li>Apuração de campo</li>
+          <li>Verificação de dados</li>
         </ul>
       </div>
       <div class="skill-group">
-        <div class="skill-group-title">Produção digital</div>
+        <div class="skill-group-title">Produção de conteúdo</div>
         <ul class="skill-list">
-          <li>WordPress</li>
+          <li>Roteiro de podcast</li>
           <li>Produção e edição de vídeo</li>
           <li>Conteúdo para redes sociais</li>
-          <li>Roteiro de podcast</li>
-          <li>Canva</li>
-          <li>IA</li>
+          <li>WordPress</li>
           <li>CapCut</li>
-          <li>Press Manager / Comunique-se</li>
+          <li>Canva</li>
         </ul>
       </div>
       <div class="skill-group">
-        <div class="skill-group-title">Ferramentas</div>
+        <div class="skill-group-title">Ferramentas profissionais</div>
         <ul class="skill-list">
-          <li>Pacote Office</li>
-          <li>Google Workspace</li>
+          <li>Press Manager / Comunique-se</li>
           <li>Clipping e monitoramento</li>
+          <li>Google Workspace</li>
+          <li>Pacote Office</li>
           <li>Relatórios e atas</li>
+          <li>Ferramentas de IA</li>
         </ul>
       </div>
       <div class="skill-group">
-        <div class="skill-group-title">Idiomas & soft skills</div>
+        <div class="skill-group-title">Idiomas & perfil</div>
         <ul class="skill-list">
           <li>Português (nativo)</li>
           <li>Inglês avançado</li>
           <li>Comunicação em câmera</li>
+          <li>Empática com fontes</li>
+          <li>Curiosidade investigativa</li>
           <li>Trabalho em equipe</li>
-          <li>Apuração de campo</li>
         </ul>
       </div>
     </div>
@@ -856,11 +441,11 @@ footer p {
         <div class="edu-year">2023 – 2027</div>
         <div>
           <div class="edu-name">Bacharelado em Jornalismo</div>
-          <div class="edu-inst">Universidade São Judas Tadeu · 6º semestre · noturno · live</div>
+          <div class="edu-inst">Universidade São Judas Tadeu · 6º semestre · noturno</div>
         </div>
       </div>
       <div class="edu-item fade-up">
-        <div class="edu-year">2025 · Em andamento</div>
+        <div class="edu-year">2026 · Em andamento</div>
         <div>
           <div class="edu-name">Covering Refugee Stories</div>
           <div class="edu-inst">Al Jazeera</div>
@@ -906,32 +491,97 @@ footer p {
     <div class="section-rule"></div>
   </div>
   <div class="clips-list">
-    <div class="clip-item fade-up">
-      <div class="clip-title">A venda da Mineração Taboca à China e suas implicações estratégicas para o Brasil</div>
-      <div class="clip-source">Artigo · Google Docs</div>
+
+    <div class="clip-item fade-up" onclick="openModal('modal-livros')">
+      <div class="clip-left">
+        <div class="clip-title">Em tempos de guerra, distribuir livros é uma política de Estado</div>
+        <div class="clip-excerpt">Sobre o MEC Livros e o papel da leitura como ato civilizatório em tempos de radicalização.</div>
+      </div>
+      <div class="clip-right">
+        <span class="clip-source">Artigo · LinkedIn</span>
+        <span class="clip-read">Ler →</span>
+      </div>
     </div>
-    <div class="clip-item fade-up">
-      <div class="clip-title">Pulseira milenar que pertencia a faraó foi roubada de museu e derretida</div>
-      <div class="clip-source">Google Docs</div>
+
+    <div class="clip-item fade-up" onclick="openModal('modal-taboca')">
+      <div class="clip-left">
+        <div class="clip-title">A venda da Mineração Taboca à China e suas implicações estratégicas para o Brasil</div>
+        <div class="clip-excerpt">Análise sobre a venda da mina de Pitinga (AM) a uma estatal chinesa e os riscos à soberania nacional.</div>
+      </div>
+      <div class="clip-right">
+        <span class="clip-source">Artigo</span>
+        <span class="clip-read">Ler →</span>
+      </div>
     </div>
-    <div class="clip-item fade-up">
-      <div class="clip-title">Atriz Jamie Lee Curtis compartilha desespero com incêndios em Los Angeles</div>
-      <div class="clip-source">AppNews · 01/08/2025</div>
+
+    <div class="clip-item fade-up" onclick="openModal('modal-seita')">
+      <div class="clip-left">
+        <div class="clip-title">A mulher e a seita: sob o disfarce de fé, uma história de abuso e tragédia em Manaus</div>
+        <div class="clip-excerpt">Morte de Didjia Cardoso, destaque do Festival de Parintins, expõe práticas criminosas de grupo religioso.</div>
+      </div>
+      <div class="clip-right">
+        <span class="clip-source">Reportagem</span>
+        <span class="clip-read">Ler →</span>
+      </div>
     </div>
-    <div class="clip-item fade-up">
-      <div class="clip-title">Reconhecido nome da indústria de energia solar é o novo convidado do podcast Comunicação É Tudo</div>
-      <div class="clip-source">Release · Vervi Assessoria</div>
+
+    <div class="clip-item fade-up" onclick="openModal('modal-pulseira')">
+      <div class="clip-left">
+        <div class="clip-title">Pulseira milenar de faraó é roubada de museu no Egito e derretida</div>
+        <div class="clip-excerpt">Artefato de 3.000 anos pertencente ao faraó Amenemope desapareceu durante preparação de exposição.</div>
+      </div>
+      <div class="clip-right">
+        <span class="clip-source">Hard news · AppNews</span>
+        <span class="clip-read">Ler →</span>
+      </div>
     </div>
-    <div class="clip-item fade-up">
-      <div class="clip-title">Instituto UniDown realiza aula de gastronomia inclusiva com a MasterChef</div>
-      <div class="clip-source">Matéria · Vervi Assessoria</div>
+
+    <div class="clip-item fade-up" onclick="openModal('modal-jamie')">
+      <div class="clip-left">
+        <div class="clip-title">Atriz Jamie Lee Curtis compartilha desespero com incêndios em Los Angeles: "Sem palavras"</div>
+        <div class="clip-excerpt">Relato da atriz sobre a destruição causada pelos incêndios que atingiram sua comunidade.</div>
+      </div>
+      <div class="clip-right">
+        <span class="clip-source">AppNews · Jan 2025</span>
+        <span class="clip-read">Ler →</span>
+      </div>
     </div>
-    <div class="clip-item fade-up">
-      <div class="clip-title">Alunos da São Judas Tadeu, na Mooca, em parceria com o Instituto L'Oréal, realizam ação gratuita</div>
-      <div class="clip-source">Boletim USJT · Out 2024</div>
+
+    <div class="clip-item fade-up" onclick="openModal('modal-loreal')">
+      <div class="clip-left">
+        <div class="clip-title">Alunos da São Judas Tadeu realizam ação gratuita com Instituto L'Oréal em apoio ao Outubro Rosa</div>
+        <div class="clip-excerpt">Iniciativa arrecadou cabelos para confecção de perucas destinadas a mulheres em tratamento oncológico.</div>
+      </div>
+      <div class="clip-right">
+        <span class="clip-source">Boletim USJT · Out 2024</span>
+        <span class="clip-read">Ler →</span>
+      </div>
     </div>
+
+    <div class="clip-item fade-up" onclick="openModal('modal-unidown')">
+      <div class="clip-left">
+        <div class="clip-title">Instituto UniDown realiza aula de gastronomia com a vencedora do MasterChef 2022, Lays Fernandes</div>
+        <div class="clip-excerpt">Aula inclusiva e gratuita no Mercadão de São Paulo para jovens com síndrome de Down.</div>
+      </div>
+      <div class="clip-right">
+        <span class="clip-source">Release · Vervi Assessoria</span>
+        <span class="clip-read">Ler →</span>
+      </div>
+    </div>
+
+    <div class="clip-item fade-up" onclick="openModal('modal-fluid')">
+      <div class="clip-left">
+        <div class="clip-title">Fluid Feeder atualiza sua certificação internacional de qualidade ISO 9001</div>
+        <div class="clip-excerpt">Empresa de tratamento de água requalifica certificação após auditoria de quatro dias.</div>
+      </div>
+      <div class="clip-right">
+        <span class="clip-source">Release · Vervi Assessoria</span>
+        <span class="clip-read">Ler →</span>
+      </div>
+    </div>
+
   </div>
-  <a class="clips-more fade-up" href="https://www.clippings.me/users/salmacatherine" target="_blank">Ver portfólio com alguns textos →</a>
+  <a class="clips-more fade-up" href="https://www.clippings.me/users/salmacatherine" target="_blank">Ver portfólio com mais textos →</a>
 </section>
 
 <!-- CONTATO -->
@@ -944,66 +594,198 @@ footer p {
     </div>
     <div class="contact-grid">
       <div class="contact-blurb fade-up">
-        <p>Estou em busca de <strong>oportunidades de estágio</strong> em jornalismo - TV, redação, assessoria de imprensa, comunicação institucional de empresas, veículos digitais ou cobertura de temas internacionais e econômicos.</p>
+        <p>Estou em busca de <strong>oportunidades de estágio</strong> em jornalismo — TV, redação, assessoria de imprensa, comunicação institucional, veículos digitais ou cobertura de temas internacionais e econômicos.</p>
         <br>
         <p>Tenho <strong>disponibilidade imediata</strong> para trabalhos em São Paulo ou remoto (global).</p>
       </div>
       <div class="contact-links fade-up">
         <a class="contact-link" href="mailto:cecconisalma@gmail.com">
-          <div class="contact-link-icon">
-            <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          </div>
-          <div>
-            <span class="contact-link-label">E-mail</span>
-            <span class="contact-link-value">cecconisalma@gmail.com</span>
-          </div>
+          <div class="contact-link-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+          <div><span class="contact-link-label">E-mail</span><span class="contact-link-value">cecconisalma@gmail.com</span></div>
         </a>
         <a class="contact-link" href="https://www.linkedin.com/in/salma-catherine-a-cecconi/" target="_blank">
-          <div class="contact-link-icon">
-            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </div>
-          <div>
-            <span class="contact-link-label">LinkedIn</span>
-            <span class="contact-link-value">salma-catherine-a-cecconi</span>
-          </div>
+          <div class="contact-link-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+          <div><span class="contact-link-label">LinkedIn</span><span class="contact-link-value">salma-catherine-a-cecconi</span></div>
         </a>
         <a class="contact-link" href="tel:+5511970718854">
-          <div class="contact-link-icon">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.59 3.36 2 2 0 0 1 3.55 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.69a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </div>
-          <div>
-            <span class="contact-link-label">Telefone</span>
-            <span class="contact-link-value">(11) 97071-8854</span>
-          </div>
+          <div class="contact-link-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.59 3.36 2 2 0 0 1 3.55 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.69a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><span class="contact-link-label">Telefone</span><span class="contact-link-value">(11) 97071-8854</span></div>
         </a>
         <a class="contact-link" href="https://online.fliphtml5.com/plgqm/ewhu/" target="_blank">
-          <div class="contact-link-icon">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-          </div>
-          <div>
-            <span class="contact-link-label">Revista NEWSC</span>
-            <span class="contact-link-value">Ver publicação →</span>
-          </div>
+          <div class="contact-link-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <div><span class="contact-link-label">Revista NEWSC</span><span class="contact-link-value">Ver publicação →</span></div>
         </a>
       </div>
     </div>
   </div>
 </div>
 
-<footer>
-  <p>Salma Catherine A. Cecconi · São Bernardo do Campo, SP · 2026</p>
-</footer>
+<footer><p>Salma Catherine A. Cecconi · São Bernardo do Campo, SP · 2026</p></footer>
+
+<!-- ══ MODAIS ══ -->
+
+<div class="modal-overlay" id="modal-livros" onclick="closeOnOverlay(event,'modal-livros')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-livros')">×</button>
+    <div class="modal-meta">Artigo · LinkedIn · 2026</div>
+    <div class="modal-title">Em tempos de guerra, distribuir livros é uma política de Estado</div>
+    <div class="modal-author">Por Salma Cecconi</div>
+    <div class="modal-body">
+      <p>Nos últimos dias, recebi uma notícia que me pareceu muito feliz — algo raro em tempos de guerras, ameaças nucleares e tensões diplomáticas: a criação do MEC Livros, uma iniciativa do Governo Federal que disponibiliza gratuitamente milhares de títulos em formato digital.</p>
+      <p>A proposta se assemelha à lógica de uma biblioteca: o leitor escolhe um título, acessa por um período determinado e, ao final, devolve para poder pegar outro. Trata-se de uma ideia simples, mas profundamente simbólica, sobretudo em um País onde o livro muitas vezes é caro, distante e até restrito às classes que conseguem pagar pelo acesso à cultura.</p>
+      <p>O anúncio da plataforma surge num momento em que o mundo volta a conviver com o vocabulário da guerra como se ele fosse inevitável: ameaças militares, disputas geopolíticas e discursos de "retaliação" e "resposta" dominam o debate público. Não se trata apenas de um cenário de conflito armado, mas também de um contexto de endurecimento social e político, no qual a polarização ganha terreno e o pensamento crítico se torna cada vez mais disputado.</p>
+      <p>É justamente por isso que políticas públicas de leitura não deveriam ser tratadas como iniciativas secundárias, meramente administrativas ou decorativas. Em sociedades democráticas, ampliar o acesso ao livro é mais do que um gesto cultural — é um investimento direto em cidadania.</p>
+      <p>Ler é uma forma de educação contínua. É o contato com outras experiências humanas, outros modos de interpretar o mundo, outras linguagens e sensibilidades. E, acima de tudo, é uma prática que exige tempo, atenção e silêncio — algo cada vez mais difícil em uma era marcada pela aceleração, pela fragmentação da informação e pela disputa constante por engajamento.</p>
+      <p>No Brasil, a desigualdade no acesso ao livro é histórica. Bibliotecas públicas seguem subfinanciadas, e escolas muitas vezes enfrentam carências básicas que tornam o incentivo à leitura uma tarefa difícil. Nesse contexto, o MEC Livros pode representar um passo importante: não apenas por disponibilizar obras, mas por reafirmar uma visão de Estado em que o conhecimento é entendido como bem público, e não como privilégio.</p>
+      <p>Essa discussão não é apenas sobre cultura. É sobre democracia. O jornalismo, por exemplo, depende diretamente de repertório. A leitura amplia vocabulário, capacidade argumentativa e compreensão de complexidades sociais. Quando o acesso à leitura se amplia, amplia-se também a capacidade de uma sociedade resistir à desinformação.</p>
+      <p>A literatura, em particular, tem um papel ainda mais profundo: ela humaniza. Ela ensina sobre o outro, e até sobre nós mesmos. Em tempos de radicalização e violência, isso não é detalhe — é antídoto.</p>
+      <p>Italo Calvino escreveu que "Ler é ir ao encontro de algo que está para ser e ninguém sabe ainda o que será." Toda sociedade que lê constrói possibilidades de futuro. E toda sociedade que desinveste em leitura reduz sua própria capacidade de imaginar alternativas.</p>
+      <p>Não é por acaso que regimes autoritários, ao longo da história, atacaram livros, escritores e bibliotecas. Heinrich Heine, em 1821, antecipou esse processo com uma frase que atravessou os séculos: "Onde se queimam livros, cedo ou tarde se queimam homens."</p>
+      <p>Por isso, em um mundo que volta a se acostumar com a guerra como normalidade, distribuir livros não é apenas um gesto cultural. É um gesto civilizatório.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-taboca" onclick="closeOnOverlay(event,'modal-taboca')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-taboca')">×</button>
+    <div class="modal-meta">Artigo</div>
+    <div class="modal-title">A venda da Mineração Taboca à China e suas implicações estratégicas para o Brasil</div>
+    <div class="modal-author">Por Salma Cecconi</div>
+    <div class="modal-body">
+      <p>A relação comercial entre o Brasil e a China, que completa 50 anos, é marcada por uma parceria sólida que tem gerado valor significativo para ambos os países. Desde 2009, a China é o maior parceiro comercial do Brasil, e o intercâmbio entre as nações cresceu de US$ 6,6 bilhões em 2003 para impressionantes US$ 157,5 bilhões em 2023.</p>
+      <p>A venda da Mineração Taboca, no final de novembro de 2024, em Presidente Figueiredo, Amazonas, à empresa estatal chinesa China Nonferrous Trade Co. Ltd. (CNT) destaca-se como um marco que vai além dos números financeiros. A Mina de Pitinga é uma das reservas poliminerais mais valiosas do mundo, com depósitos de estanho, nióbio, tântalo, terras raras e até resíduos de urânio. Essa transação não é apenas um evento econômico, mas um movimento estratégico que precisa ser analisado com cautela.</p>
+      <p>O interesse da China na Taboca não se limita ao estanho, mas principalmente aos rejeitos acumulados ao longo de décadas. Esses rejeitos contêm minerais estratégicos como ítrio, elemento essencial para as baterias de carros elétricos, além de outros metais críticos para a indústria tecnológica global.</p>
+      <p>A China, líder na tecnologia de separação e beneficiamento de terras raras, tem agora uma oportunidade única de explorar um mercado altamente lucrativo. Enquanto isso, o Brasil, dono da terceira maior reserva de terras raras do mundo, continua com produção extremamente baixa devido à falta de tecnologia e investimentos no setor.</p>
+      <p>Não podemos subestimar o papel estratégico de minerais como nióbio e terras raras. Eles são vitais para baterias recarregáveis, superímãs e até sistemas de defesa militar. Com o avanço da tecnologia, especialmente na transição para energias limpas, esses recursos tornam-se cada vez mais valiosos.</p>
+      <p>O impacto da venda da Taboca não se limita à economia. O urânio encontrado em Pitinga é um recurso cuja exploração está constitucionalmente restrita ao Estado brasileiro. Ainda que as concentrações atuais não sejam comerciais, os avanços tecnológicos podem mudar esse cenário, colocando em risco a soberania sobre um material tão sensível.</p>
+      <p>O governo brasileiro precisa urgentemente criar políticas claras de fiscalização e tributação para garantir que esses rejeitos não sejam exportados sem beneficiamento. Em um cenário global onde a competição por minerais estratégicos se intensifica, o Brasil não pode agir com passividade. A venda da Mineração Taboca é mais do que uma transação comercial: é um alerta sobre como o País deve gerenciar suas riquezas naturais em benefício das futuras gerações.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-seita" onclick="closeOnOverlay(event,'modal-seita')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-seita')">×</button>
+    <div class="modal-meta">Reportagem</div>
+    <div class="modal-title">A mulher e a seita: sob o disfarce de fé, uma história de abuso e tragédia em Manaus</div>
+    <div class="modal-author">Por Salma Cecconi</div>
+    <div class="modal-body">
+      <p>Sinhazinha linda, sinhazinha bela — é o que canta o mestre da noite, ecoando a cultura, a terra e a memória de Parintins. Vestida de vermelho, Dilemar Cardoso Carlos da Silva — ou Didjia Cardoso, como era conhecida — descia do carro alegórico como uma figura mística do Festival de Parintins.</p>
+      <p>Essa mesma sinhazinha do Boi Garantido que, no dia 28 de maio de 2024, aos 32 anos, foi encontrada morta em sua casa, em Manaus, vítima de uma possível overdose de cetamina.</p>
+      <p>Segundo a investigação policial, a família de Didjia — os Cardoso — era responsável pela criação de uma seita religiosa e criminosa chamada Pai, Mãe e Vida. O grupo promovia rituais nos quais o uso de substâncias como cetamina e potenay eram incentivadas para "transcender a outra dimensão". As práticas da seita envolviam abusos: vítimas vulneráveis eram obrigadas a permanecer nuas, sem poder tomar banho ou se alimentar.</p>
+      <p>Dentro da seita, Ademar Farias Cardoso Neto, irmão de Didjia, assumia o papel de Jesus; Cleusimar Cardoso, a mãe, encarnava Maria, mãe de Cristo; e Didjia representava Maria Madalena. Foi em um desses rituais que ela faleceu.</p>
+      <p>Cleomar Cardoso, tia de Didjia, acusou os demais integrantes da seita de negar socorro à sobrinha e de fomentar seu vício em drogas. Ademar, de 29 anos, e Cleusimar, líderes do grupo, foram indiciados por uma série de crimes: aborto induzido sem consentimento, estupro de vulnerável, sequestro, cárcere privado e colocar em risco a saúde de terceiros.</p>
+      <p>Uma das vítimas, ex-companheira de Ademar, de 27 anos, relatou que foi aliciada para entrar na seita e começou a usar cetamina sob influência dele. Segundo o inquérito, há indícios de que ela sofreu um aborto dentro da casa devido ao uso forçado da droga.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-pulseira" onclick="closeOnOverlay(event,'modal-pulseira')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-pulseira')">×</button>
+    <div class="modal-meta">Hard news · AppNews</div>
+    <div class="modal-title">Pulseira milenar de faraó é roubada de museu no Egito e derretida</div>
+    <div class="modal-author">Por Salma Cecconi</div>
+    <div class="modal-body">
+      <p>O ministro do Turismo e Antiguidades do Egito, Sherif Fathy, anunciou no sábado (20) que a pulseira de 3.000 anos que pertencia ao faraó Amenemope foi roubada em 9 de setembro do famoso Museu Egípcio do Cairo, enquanto funcionários preparavam artefatos para uma exposição na Itália, e posteriormente foi derretida.</p>
+      <p>A declaração gerou uma onda de indignação por parte dos egípcios, porque além de se tratar de um tesouro milenar, há grande respeito e estima pela antiga herança cultural daquela nação. A pulseira continha uma pedra de lápis-lazúli e pertenceu ao faraó Amenemope, que reinou há cerca de 3.000 anos e escreveu um dos mais conhecidos exemplos da filosofia ética egípcia antiga, a Instrução de Amenemope.</p>
+      <h3>Local não possuía câmeras</h3>
+      <p>Autoridades disseram que o artefato foi retirado de um laboratório de restauração do museu e levado a uma rede de revendedores antes de ser derretido. O ministro declarou que o laboratório não possuía câmeras de segurança.</p>
+      <h3>Pulseira foi vendida e derretida</h3>
+      <p>Quatro suspeitos foram presos e interrogados. Entre os detidos, está um especialista em restauração do próprio museu, que confessou ter dado a pulseira a um conhecido dono de uma loja de prata no Cairo. A pulseira teria sido vendida por valor equivalente a US$ 3.800 e revendida por cerca de US$ 4.000 a um trabalhador de outra oficina de ourivesaria, que a derreteu para fazer novas joias.</p>
+      <p>Os suspeitos confessaram o crime e o dinheiro foi apreendido. Um juiz ordenou que o especialista em restauração e seu conhecido permanecessem detidos por mais 15 dias para novas investigações.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-jamie" onclick="closeOnOverlay(event,'modal-jamie')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-jamie')">×</button>
+    <div class="modal-meta">Hard news · AppNews · Janeiro 2025</div>
+    <div class="modal-title">Atriz Jamie Lee Curtis compartilha desespero com incêndios em Los Angeles: "Sem palavras"</div>
+    <div class="modal-author">Por Salma Catherine, sob supervisão de Igor de Oliveira — AppNews</div>
+    <div class="modal-body">
+      <p>A atriz e ativista norte-americana Jamie Lee Curtis, conhecida por sua atuação em produções como Sexta-Feira Muito Louca e Um Natal Muito, Muito Louco, utilizou suas redes sociais nesta quarta-feira (8) para relatar a devastação causada pelos incêndios florestais que atingem Los Angeles, nos Estados Unidos.</p>
+      <p>Curtis publicou três registros em sua conta no Instagram, onde possui mais de 6 milhões de seguidores, mostrando a gravidade da situação em sua comunidade. Na primeira publicação, que traz a imagem de uma árvore em chamas, a atriz desabafou: "Minha comunidade e possivelmente minha casa estão em chamas. Minha família está segura. Muitos dos meus amigos perderão suas casas. É uma situação aterrorizante, e sou grata aos bombeiros e a todos os bons samaritanos que estão ajudando as pessoas."</p>
+      <p>Em outro vídeo compartilhado horas depois, Curtis mostra a destruição deixada pelas chamas em sua vizinhança: "Nosso amado bairro se foi. Nossa casa está segura. Tantas outras pessoas perderam tudo. Ajude onde puder."</p>
+      <p>A última publicação traz imagens ainda mais chocantes, acompanhadas de uma legenda breve: "Sem palavras."</p>
+      <p>Segundo a Associated Press, os incêndios florestais começaram na terça-feira e foram alimentados pelos ventos de Santa Ana, que atingiram rajadas de mais de 70 mph (112 km/h) em alguns pontos.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-loreal" onclick="closeOnOverlay(event,'modal-loreal')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-loreal')">×</button>
+    <div class="modal-meta">Boletim · USJT · Outubro 2024</div>
+    <div class="modal-title">Alunos da São Judas Tadeu realizam ação gratuita com Instituto L'Oréal em apoio ao Outubro Rosa</div>
+    <div class="modal-author">Por Salma Cecconi</div>
+    <div class="modal-body">
+      <p>A Atlética de Comunicação Social e Artes (Coelho) da Universidade São Judas Tadeu, em parceria com voluntários do Instituto L'Oréal, realizou nos dias 21, 22 e 24 de outubro uma ação solidária gratuita de cortes de cabelo. A iniciativa teve como objetivo arrecadar fios para a confecção de perucas e apoiar as mulheres que estão enfrentando o câncer de mama.</p>
+      <p>O Outubro Rosa é uma campanha que, há três décadas, alerta sobre a importância do diagnóstico precoce. Segundo o Instituto Nacional de Câncer (INCA), devem ser registrados no Brasil 73.610 novos casos de câncer de mama entre 2023 e 2025 — uma taxa de incidência de 41,89 casos por 100.000 mulheres.</p>
+      <p>Além da arrecadação de cabelos, a ação visou sensibilizar e educar a comunidade acadêmica sobre a prevenção e cuidado com a saúde feminina. A líder e organizadora da iniciativa, Raquel Verderosi, contou: "Essa é uma campanha que a Coelho faz todos os anos. A gente conversa muito com as mulheres, ano passado conhecemos uma mulher que estava em remissão do câncer de mama e ficou muito emocionada. Tem atleticanas que já rasparam o cabelo todo para doar."</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-unidown" onclick="closeOnOverlay(event,'modal-unidown')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-unidown')">×</button>
+    <div class="modal-meta">Release · Vervi Assessoria</div>
+    <div class="modal-title">Instituto UniDown realiza aula de gastronomia com a vencedora do MasterChef 2022, Lays Fernandes</div>
+    <div class="modal-author">Por Salma Cecconi</div>
+    <div class="modal-body">
+      <p>O Instituto UniDown realizará aula gratuita de gastronomia para pessoas com síndrome de Down no dia 26 de outubro, das 13h às 15h, no Espaço de Gastronomia e Cultura do Mercado Municipal de São Paulo. A chef Lays Fernandes, ganhadora do MasterChef 2022, ministrará a aula visando a inclusão e capacitação de pessoas na condição genética T21.</p>
+      <p>Desde 2006, Marcio, fundador do Instituto UniDown, organização sem fins lucrativos, busca instruir pessoas com T21 de todas as idades mediante cursos, atividades e programações para que tenham oportunidades significativas na sociedade.</p>
+      <p>A atividade é destinada exclusivamente a pessoas com síndrome de Down a partir de 14 anos e as vagas são limitadas. Os interessados devem se inscrever previamente pelo WhatsApp do UniDown: (11) 9.9257-7352.</p>
+      <p><strong>Local:</strong> Mercado Municipal de São Paulo — R. da Cantareira, 306, Centro Histórico de São Paulo. Instagram: @institutounidown</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-fluid" onclick="closeOnOverlay(event,'modal-fluid')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-fluid')">×</button>
+    <div class="modal-meta">Release · Vervi Assessoria</div>
+    <div class="modal-title">Fluid Feeder atualiza sua certificação internacional de qualidade ISO 9001</div>
+    <div class="modal-author">Por Salma Cecconi</div>
+    <div class="modal-body">
+      <p>Empresa especialista em soluções para tratamento de água e efluentes, a Fluid Feeder atualiza sua certificação ISO 9001 — selo internacional que comprova a confiabilidade e qualidade de gestão de uma organização.</p>
+      <p>A certificação ISO 9001, concedida pela International Organization for Standardization (ISO), é um dos principais padrões globais para sistemas de gestão de qualidade. O reconhecimento é concedido apenas a organizações que demonstram capacidade de fornecer produtos e serviços que atendam as expectativas dos clientes e os requisitos regulatórios aplicáveis.</p>
+      <p>"Essa recertificação é um motivo de grande orgulho para toda a equipe da Fluid Feeder. A auditoria foi intensa, com quatro dias de análise minuciosa de todos os nossos processos. Superar essa etapa com êxito demonstra o nosso comprometimento com a qualidade e a melhoria contínua", afirma Francisco Carlos Oliver, CEO da Fluid Feeder. A atualização ocorreu em junho por meio da auditoria certificadora Bureau Veritas.</p>
+      <p>Fundada em 1997, com capital 100% nacional, a Fluid Feeder já atuou em empresas dos mais variados ramos — da indústria química à farmacêutica, da área têxtil ao setor de papel e celulose. Acesse: fluidfeeder.com.br</p>
+    </div>
+  </div>
+</div>
 
 <script>
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 80);
-    }
+    if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), i * 80);
   });
 }, { threshold: 0.1 });
-
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+function openModal(id) {
+  document.getElementById(id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeOnOverlay(e, id) {
+  if (e.target === e.currentTarget) closeModal(id);
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.open').forEach(m => {
+      m.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  }
+});
 </script>
 </body>
 </html>
