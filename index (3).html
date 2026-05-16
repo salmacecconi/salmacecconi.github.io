@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salma Catherine A. Cecconi — Jornalismo</title>
+<meta name="description" content="Portfólio de Salma Catherine Andrade Cecconi, estudante de jornalismo com experiência em assessoria de imprensa, produção digital e jornalismo internacional.">
+<meta property="og:title" content="Salma Catherine — Jornalismo">
+<meta property="og:description" content="Estudante de jornalismo com experiência em assessoria de imprensa, produção digital e temas internacionais. São Bernardo do Campo, SP.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salmacecconi.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Salma Catherine — Jornalismo">
+<meta name="twitter:description" content="Estudante de jornalismo com experiência em assessoria de imprensa, produção digital e temas internacionais.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📰</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F5F0E8;--cream-dark:#EDE6D6;--ink:#1A1612;--ink-mid:#4A3F35;--ink-light:#7A6E65;--accent:#1B4B8A;--accent-light:#E8EFF8;--teal:#1D6B5A;--teal-light:#E6F3EF;--amber:#8B5E1A;--amber-light:#FBF0E0;--rule:rgba(26,22,18,0.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);font-size:16px;line-height:1.7;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(245,240,232,0.93);backdrop-filter:blur(12px);border-bottom:.5px solid var(--rule);padding:0 2rem;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--ink);text-decoration:none}
+.nav-links{display:flex;gap:1.75rem;list-style:none}
+.nav-links a{font-size:13px;color:var(--ink-light);text-decoration:none;letter-spacing:.02em;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-toggle{display:none;background:transparent;border:.5px solid var(--rule);width:38px;height:38px;border-radius:50%;font-size:17px;cursor:pointer;color:var(--ink);align-items:center;justify-content:center;transition:background .2s}
+.nav-toggle:hover{background:var(--cream-dark)}
+
+/* MOBILE MENU */
+.mob-overlay{display:none;position:fixed;inset:0;z-index:999;background:rgba(26,22,18,0.5);backdrop-filter:blur(3px)}
+.mob-overlay.open{display:block}
+.mob-drawer{position:fixed;top:0;right:0;bottom:0;width:min(300px,85vw);background:var(--cream);z-index:1000;padding:1.5rem;display:flex;flex-direction:column;border-left:.5px solid var(--rule);transform:translateX(100%);transition:transform .25s ease}
+.mob-drawer.open{transform:translateX(0)}
+.mob-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem}
+.mob-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:600}
+.mob-close{background:none;border:.5px solid var(--rule);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:20px;color:var(--ink-light);display:flex;align-items:center;justify-content:center}
+.mob-nav{display:flex;flex-direction:column;gap:4px}
+.mob-nav a{font-size:16px;color:var(--ink);text-decoration:none;padding:10px 12px;border-radius:6px;transition:background .2s}
+.mob-nav a:hover{background:var(--cream-dark)}
+.mob-footer{margin-top:auto;display:flex;flex-direction:column;gap:10px;padding-top:1.5rem;border-top:.5px solid var(--rule)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:8rem 2rem 4rem;max-width:900px;margin:0 auto;position:relative}
+.hero-eyebrow{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-light);margin-bottom:1.5rem;display:flex;align-items:center;gap:10px}
+.hero-eyebrow::before{content:'';display:inline-block;width:32px;height:1px;background:var(--ink-light)}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(48px,8vw,88px);font-weight:700;line-height:1.0;color:var(--ink);margin-bottom:.5rem}
+.hero-title em{font-style:italic;font-weight:400;color:var(--accent)}
+.hero-title .last{display:block;font-size:clamp(36px,6vw,66px);color:var(--ink-mid);font-weight:400}
+.hero-sub{font-size:18px;font-weight:300;color:var(--ink-mid);max-width:520px;margin:2rem 0 2.5rem;line-height:1.7}
+.hero-sub strong{font-weight:500;color:var(--ink)}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:4px;font-size:14px;font-weight:500;text-decoration:none;transition:all .2s;letter-spacing:.01em}
+.btn-primary{background:var(--accent);color:#fff;border:1.5px solid var(--accent)}
+.btn-primary:hover{background:#153d74}
+.btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--rule)}
+.btn-outline:hover{border-color:var(--ink-mid);background:var(--cream-dark)}
+.btn-dl{background:var(--teal);color:#fff;border:1.5px solid var(--teal)}
+.btn-dl:hover{background:#155a47}
+.hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--ink-light);font-size:11px;letter-spacing:.1em;text-transform:uppercase;animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+
+/* HIGHLIGHTS */
+.highlights{background:var(--ink);padding:2.5rem 2rem}
+.highlights-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.hl-item{text-align:center;padding:1.25rem 1rem;border:.5px solid rgba(245,240,232,0.1);border-radius:6px}
+.hl-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--cream);line-height:1;margin-bottom:4px}
+.hl-num em{font-style:italic;color:#7EB3E8}
+.hl-label{font-size:11px;color:rgba(245,240,232,0.55);text-transform:uppercase;letter-spacing:.08em;line-height:1.4}
+
+/* SECTIONS */
+section{max-width:900px;margin:0 auto;padding:5rem 2rem}
+.section-header{display:flex;align-items:baseline;gap:1rem;margin-bottom:3rem}
+.section-num{font-family:'Playfair Display',serif;font-size:13px;color:var(--ink-light);font-style:italic}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,38px);font-weight:600;color:var(--ink);line-height:1.15}
+.section-rule{flex:1;height:.5px;background:var(--rule)}
+
+/* SOBRE */
+.sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.sobre-text p{font-size:16px;font-weight:300;color:var(--ink-mid);line-height:1.8;margin-bottom:1.25rem}
+.sobre-text p strong{font-weight:500;color:var(--ink)}
+.sobre-text blockquote{border-left:3px solid var(--accent);padding-left:1.25rem;margin:2rem 0;font-family:'Playfair Display',serif;font-style:italic;font-size:18px;color:var(--ink);line-height:1.6}
+.sobre-facts{display:flex;flex-direction:column;gap:1.5rem}
+.fact-item{padding:1.25rem;background:white;border-radius:6px;border:.5px solid var(--rule);border-left:3px solid var(--accent)}
+.fact-item.teal{border-left-color:var(--teal)}
+.fact-item.amber{border-left-color:var(--amber)}
+.fact-label{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-light);margin-bottom:4px}
+.fact-value{font-size:15px;font-weight:500;color:var(--ink)}
+.fact-sub{font-size:13px;color:var(--ink-light);margin-top:2px}
+
+/* EXPERIÊNCIA */
+.exp-list{display:flex;flex-direction:column}
+.exp-item{display:grid;grid-template-columns:180px 1fr;gap:2rem;padding:2.5rem 0;border-bottom:.5px solid var(--rule)}
+.exp-item:first-child{border-top:.5px solid var(--rule)}
+.exp-meta{padding-top:4px}
+.exp-date{font-size:12px;font-weight:500;color:var(--ink-light);margin-bottom:4px}
+.exp-status{display:inline-block;font-size:10px;font-weight:500;padding:2px 8px;border-radius:20px;background:var(--accent-light);color:var(--accent);letter-spacing:.06em;text-transform:uppercase}
+.exp-status.teal{background:var(--teal-light);color:var(--teal)}
+.exp-company{font-size:20px;font-weight:500;color:var(--ink);margin-bottom:2px}
+.exp-role{font-size:13px;color:var(--ink-light);margin-bottom:12px}
+.exp-desc{font-size:15px;font-weight:300;color:var(--ink-mid);line-height:1.75;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:11px;padding:4px 10px;border-radius:20px;background:var(--cream-dark);color:var(--ink-mid);border:.5px solid var(--rule)}
+
+/* IC */
+.ic-card{background:white;border-radius:8px;border:.5px solid var(--rule);border-top:3px solid var(--teal);padding:2rem;margin-top:2.5rem}
+.ic-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;padding:4px 12px;background:var(--teal-light);color:var(--teal);border-radius:20px;margin-bottom:1rem;text-transform:uppercase;letter-spacing:.07em}
+.ic-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--ink);margin-bottom:8px;line-height:1.3}
+.ic-pub{font-size:13px;color:var(--teal);font-weight:500;margin-bottom:12px}
+.ic-desc{font-size:15px;font-weight:300;color:var(--ink-mid);line-height:1.75}
+
+/* PROJETOS */
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.proj-card{background:white;border-radius:8px;border:.5px solid var(--rule);padding:1.75rem;transition:transform .2s,box-shadow .2s;text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.proj-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(26,22,18,.08)}
+.proj-type{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-light);margin-bottom:12px}
+.proj-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--ink);margin-bottom:10px;line-height:1.25}
+.proj-desc{font-size:14px;font-weight:300;color:var(--ink-mid);line-height:1.7;margin-bottom:1rem;flex:1}
+.proj-link{font-size:13px;font-weight:500;color:var(--accent);margin-top:auto}
+
+/* HABILIDADES */
+.skills-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
+.skill-group-title{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-light);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:.5px solid var(--rule)}
+.skill-list{list-style:none}
+.skill-list li{font-size:14px;color:var(--ink-mid);padding:5px 0;display:flex;align-items:center;gap:8px}
+.skill-list li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--accent);flex-shrink:0}
+
+/* FORMAÇÃO */
+.edu-list{display:flex;flex-direction:column}
+.edu-item{display:grid;grid-template-columns:180px 1fr;gap:2rem;padding:1.75rem 0;border-bottom:.5px solid var(--rule)}
+.edu-item:first-child{border-top:.5px solid var(--rule)}
+.edu-year{font-size:13px;color:var(--ink-light);padding-top:3px}
+.edu-name{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:2px}
+.edu-inst{font-size:13px;color:var(--ink-light)}
+
+/* TEXTOS */
+.clips-list{display:flex;flex-direction:column}
+.clip-item{display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;padding:1.25rem 0;border-bottom:.5px solid var(--rule);cursor:pointer;transition:padding-left .2s}
+.clip-item:first-child{border-top:.5px solid var(--rule)}
+.clip-item:hover{padding-left:8px}
+.clip-left{flex:1}
+.clip-title{font-size:15px;font-weight:400;color:var(--ink);line-height:1.4;margin-bottom:4px}
+.clip-excerpt{font-size:13px;color:var(--ink-light);line-height:1.5;font-weight:300}
+.clip-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0}
+.clip-source{font-size:11px;color:var(--ink-light);white-space:nowrap}
+.clip-read{font-size:12px;font-weight:500;color:var(--accent);white-space:nowrap}
+.clips-more{margin-top:1.5rem;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:var(--accent);text-decoration:none}
+.clips-more:hover{text-decoration:underline}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:2000;background:rgba(26,22,18,.6);backdrop-filter:blur(4px);justify-content:center;align-items:flex-start;padding:2rem 1rem;overflow-y:auto}
+.modal-overlay.open{display:flex}
+.modal{background:var(--cream);max-width:720px;width:100%;border-radius:8px;padding:3rem;position:relative;margin:auto}
+.modal-close{position:absolute;top:1.25rem;right:1.25rem;background:none;border:.5px solid var(--rule);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:20px;color:var(--ink-light);display:flex;align-items:center;justify-content:center;transition:background .2s}
+.modal-close:hover{background:var(--cream-dark)}
+.modal-meta{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-light);margin-bottom:.75rem}
+.modal-title{font-family:'Playfair Display',serif;font-size:clamp(20px,3vw,28px);font-weight:700;color:var(--ink);margin-bottom:.5rem;line-height:1.2}
+.modal-author{font-size:13px;color:var(--ink-light);margin-bottom:2rem;padding-bottom:2rem;border-bottom:.5px solid var(--rule)}
+.modal-body{font-size:16px;font-weight:300;color:var(--ink-mid);line-height:1.85}
+.modal-body p{margin-bottom:1.25rem}
+.modal-body h3{font-size:15px;font-weight:500;color:var(--ink);margin:1.5rem 0 .5rem}
+
+/* CONTATO */
+.contact-section{background:var(--ink);color:var(--cream)}
+.contact-inner{max-width:900px;margin:0 auto;padding:5rem 2rem}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem}
+.contact-blurb{font-size:17px;font-weight:300;color:rgba(245,240,232,.75);line-height:1.8}
+.contact-blurb strong{font-weight:500;color:var(--cream)}
+.contact-links{display:flex;flex-direction:column;gap:1rem}
+.contact-link{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream);padding:1rem 1.25rem;border-radius:6px;border:.5px solid rgba(245,240,232,.15);transition:background .2s}
+.contact-link:hover{background:rgba(245,240,232,.07)}
+.contact-link-icon{width:36px;height:36px;border-radius:50%;background:rgba(245,240,232,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-link-icon svg{width:16px;height:16px;stroke:var(--cream);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.contact-link-label{font-size:11px;color:rgba(245,240,232,.45);display:block;margin-bottom:1px}
+.contact-link-value{font-size:14px}
+footer{background:var(--ink);border-top:.5px solid rgba(245,240,232,.1);padding:1.5rem 2rem;text-align:center}
+footer p{font-size:12px;color:rgba(245,240,232,.3)}
+
+/* ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:640px){
+  nav{padding:0 1.25rem}
+  .nav-links{display:none}
+  .nav-toggle{display:flex}
+  .highlights-inner{grid-template-columns:1fr 1fr;gap:1rem}
+  section{padding:3.5rem 1.25rem}
+  .hero{padding:7rem 1.25rem 3rem}
+  .sobre-grid,.proj-grid,.contact-grid{grid-template-columns:1fr;gap:2rem}
+  .exp-item,.edu-item{grid-template-columns:1fr;gap:.5rem}
+  .hero-title{font-size:44px}
+  .hero-title .last{font-size:34px}
+  .modal{padding:2rem 1.25rem}
+  .clip-excerpt{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-name" href="#hero">Salma Catherine</a>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#experiencia">Experiência</a></li>
+    <li><a href="#projetos">Projetos</a></li>
+    <li><a href="#textos">Textos</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Menu" onclick="openMenu()">☰</button>
+</nav>
+
+<div class="mob-overlay" id="mobOverlay" onclick="closeMenu()"></div>
+<div class="mob-drawer" id="mobDrawer">
+  <div class="mob-head">
+    <span class="mob-title">Salma Catherine</span>
+    <button class="mob-close" onclick="closeMenu()">×</button>
+  </div>
+  <nav class="mob-nav">
+    <a href="#sobre" onclick="closeMenu()">01 · Sobre</a>
+    <a href="#experiencia" onclick="closeMenu()">02 · Experiência</a>
+    <a href="#projetos" onclick="closeMenu()">03 · Projetos</a>
+    <a href="#textos" onclick="closeMenu()">06 · Textos</a>
+    <a href="#contato" onclick="closeMenu()">07 · Contato</a>
+  </nav>
+  <div class="mob-footer">
+    <a class="btn btn-primary" href="mailto:cecconisalma@gmail.com" onclick="closeMenu()">Contato</a>
+    <a class="btn btn-dl" href="Salma_Cecconi_Curriculo.pdf" download onclick="closeMenu()">⬇ Currículo PT</a>
+    <a class="btn btn-outline" href="Salma_Cecconi_CV_English.pdf" download onclick="closeMenu()" style="border-color:var(--teal);color:var(--teal)">⬇ CV English</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero" class="hero" style="max-width:900px">
+  <div class="hero-eyebrow">Portfólio · Jornalismo · 2026</div>
+  <h1 class="hero-title">
+    Salma <em>Catherine</em>
+    <span class="last">A. Cecconi</span>
+  </h1>
+  <p class="hero-sub">
+    Estudante de jornalismo com <strong>experiência na área desde o 2º semestre</strong>.
+    Interesse por temas internacionais, economia, geopolítica e direitos humanos.
+    Baseada em São Bernardo do Campo, SP.
+  </p>
+  <div class="hero-cta">
+    <a class="btn btn-primary" href="#experiencia">Ver experiências</a>
+    <a class="btn btn-dl" href="Salma_Cecconi_Curriculo.pdf" download>⬇ Currículo PT</a>
+    <a class="btn btn-outline" href="Salma_Cecconi_CV_English.pdf" download style="border-color:var(--teal);color:var(--teal)">⬇ CV English</a>
+    <a class="btn btn-outline" href="https://salmacecconiportfolio.my.canva.site/" target="_blank">Portfólio storytelling</a>
+    <a class="btn btn-outline" href="mailto:cecconisalma@gmail.com">Contato</a>
+  </div>
+  <div class="hero-scroll">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<div class="highlights">
+  <div class="highlights-inner fade-up">
+    <div class="hl-item">
+      <div class="hl-num"><em>2</em></div>
+      <div class="hl-label">experiências simultâneas em jornalismo</div>
+    </div>
+    <div class="hl-item">
+      <div class="hl-num">6º</div>
+      <div class="hl-label">semestre · USJT · noturno</div>
+    </div>
+    <div class="hl-item">
+      <div class="hl-num"><em>IC</em></div>
+      <div class="hl-label">artigo aprovado em simpósio nacional</div>
+    </div>
+    <div class="hl-item">
+      <div class="hl-num"><em>Al</em></div>
+      <div class="hl-label">Jazeera · Cásper Líbero · cursos internacionais</div>
+    </div>
+  </div>
+</div>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="section-header fade-up">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Sobre mim</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="sobre-grid fade-up">
+    <div class="sobre-text">
+      <p>22 anos, sou estudante de Jornalismo na <strong>Universidade São Judas Tadeu</strong> (6º semestre), com interesse especial por temas internacionais, economia, geopolítica, direitos humanos e cultura.</p>
+      <p>Antes do jornalismo, cursei <strong>Estilismo e Coordenação de Moda</strong> no SENAC — o que me deu repertório sobre comportamento, estética e tendências culturais. Mas, quando entrei para o jornalismo, percebi que aqui sempre foi meu lugar.</p>
+      <blockquote>"O jornalismo me escolheu, e eu realmente me apaixonei por ele."</blockquote>
+      <p>Tenho <strong>inglês avançado</strong>, domínio em produção de conteúdo multimídia, WordPress, SEO e edição de vídeo. Sou curiosa por natureza, empática com as fontes e comprometida com a verificação.</p>
+    </div>
+    <div class="sobre-facts">
+      <div class="fact-item">
+        <div class="fact-label">Formação</div>
+        <div class="fact-value">Jornalismo · USJT</div>
+        <div class="fact-sub">6º semestre · formatura jul 2027</div>
+      </div>
+      <div class="fact-item teal">
+        <div class="fact-label">Localização</div>
+        <div class="fact-value">São Bernardo do Campo, SP</div>
+        <div class="fact-sub">Disponível para São Paulo, Grande ABC e remoto</div>
+      </div>
+      <div class="fact-item amber">
+        <div class="fact-label">Idiomas</div>
+        <div class="fact-value">Português · Inglês avançado</div>
+        <div class="fact-sub">Inglês em constante prática</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-label">Editorias de interesse</div>
+        <div class="fact-value">Internacional · Economia · Direitos Humanos</div>
+        <div class="fact-sub">Geopolítica · Meio ambiente · Cultura</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIÊNCIA -->
+<section id="experiencia" style="background:white;max-width:100%;padding:5rem 0">
+  <div style="max-width:900px;margin:0 auto;padding:0 2rem">
+    <div class="section-header fade-up">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Experiência profissional</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="exp-list">
+      <div class="exp-item fade-up">
+        <div class="exp-meta">
+          <div class="exp-date">Mai 2024 – atual</div>
+          <span class="exp-status">Atual</span>
+        </div>
+        <div class="exp-content">
+          <div class="exp-company">Vervi Assessoria de Imprensa</div>
+          <div class="exp-role">Estagiária de Jornalismo · São Paulo, presencial</div>
+          <div class="exp-desc">Redação de releases, notas e artigos para diferentes públicos e formatos. Criação de roteiros e acompanhamento das gravações do podcast <em>Comunicação É Tudo</em>. Cobertura de eventos corporativos de grande porte (FEIMEC, EXPOSEC, InterSolar), clipping, elaboração de relatórios e produção de conteúdo para redes sociais e YouTube.</div>
+          <div class="tags">
+            <span class="tag">Assessoria de imprensa</span><span class="tag">Releases e notas</span><span class="tag">Podcast</span><span class="tag">Cobertura de eventos</span><span class="tag">Clipping</span><span class="tag">Instagram</span><span class="tag">YouTube</span><span class="tag">Comunicação institucional</span>
+          </div>
+        </div>
+      </div>
+      <div class="exp-item fade-up">
+        <div class="exp-meta">
+          <div class="exp-date">Jul 2024 – atual</div>
+          <span class="exp-status teal">Atual</span>
+        </div>
+        <div class="exp-content">
+          <div class="exp-company">AppNews Delivery</div>
+          <div class="exp-role">Jornalista digital · Global, remoto</div>
+          <div class="exp-desc">Curadoria e produção de conteúdo jornalístico em aplicativo global de notícias em tempo real. Foco em agilidade, precisão e construção de títulos com lógica de SEO. Publicação de hard news e notícias frias em múltiplas editorias (Economia, Internacional, Agronegócio, Cotidiano, Nacional, entre outras).</div>
+          <div class="tags">
+            <span class="tag">Hard news</span><span class="tag">SEO editorial</span><span class="tag">Editoria Internacional</span><span class="tag">Tempo real</span><span class="tag">Curadoria</span>
+          </div>
+        </div>
+      </div>
+      <div class="exp-item fade-up">
+        <div class="exp-meta">
+          <div class="exp-date">Ago 2022 – Jun 2023</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-company">Linda Menina Boutique</div>
+          <div class="exp-role">SAC e produção de conteúdo · São Bernardo do Campo</div>
+          <div class="exp-desc">Primeira experiência profissional. Atendimento ao cliente e suporte online. Produção de conteúdo para redes sociais e marketing orgânico. Treinada por especialista em mídias sociais.</div>
+          <div class="tags">
+            <span class="tag">Atendimento ao cliente</span><span class="tag">Redes sociais</span><span class="tag">Marketing orgânico</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ic-card fade-up">
+      <div class="ic-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        Destaque · Iniciação Científica
+      </div>
+      <div class="ic-title">"Paz ou Conflito? Como o jornalismo narra processos de imigração e refúgio"</div>
+      <div class="ic-pub">✦ Resumo expandido aprovado para apresentação e publicação no IV Simpósio de Pesquisa do Ecossistema Ânima</div>
+      <div class="ic-desc">Pesquisa que investiga a cobertura midiática da Agência Brasil sobre refúgio sob a ótica dos direitos humanos e do jornalismo para a Paz. Artigo: <em>"Cobertura jornalística para a Paz: migrações, refúgio e crises humanitárias na Agência Brasil (2024–2025)"</em> — análise à luz do jornalismo para a Paz ou do jornalismo de guerra.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos">
+  <div class="section-header fade-up">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Projetos</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="proj-grid">
+    <a class="proj-card fade-up" href="https://online.fliphtml5.com/plgqm/ewhu/" target="_blank">
+      <div class="proj-type">Revista digital · Criadora e editora</div>
+      <div class="proj-name">Revista NEWSC</div>
+      <div class="proj-desc">Publicação digital trimestral voltada à Geração Z. Foco em cultura jovem, arte independente, moda autoral e comportamento no centro expandido de São Paulo. Reportagens, entrevistas e narrativas autorais.</div>
+      <div class="proj-link">Ler a revista →</div>
+    </a>
+    <a class="proj-card fade-up" href="https://www.youtube.com/watch?v=SzAwSbJR1n4" target="_blank">
+      <div class="proj-type">Documentário · Editora responsável</div>
+      <div class="proj-name">Nada Sobre Nós Sem Nós</div>
+      <div class="proj-desc">Documentário sobre o movimento de pessoas com deficiência em Cachoeiro de Itapemirim (ES). Produzido com equipe geograficamente distribuída. Inclui versão com Libras e audiodescrição.</div>
+      <div class="tags" style="margin-bottom:1rem"><span class="tag">Edição de vídeo</span><span class="tag">Acessibilidade</span><span class="tag">Libras</span></div>
+      <div class="proj-link">Assistir no YouTube →</div>
+    </a>
+    <div class="proj-card fade-up">
+      <div class="proj-type">Cobertura jornalística · A3 USJT 2026</div>
+      <div class="proj-name">O Impacto da China na Economia Brasileira</div>
+      <div class="proj-desc">Cobertura multiplataforma sobre a relação econômica Brasil-China. Apuração de campo na FEIMEC 2026, reportagem aprofundada, Reels para Instagram e thread para o X.</div>
+      <div class="tags"><span class="tag">Multiplataforma</span><span class="tag">Economia</span><span class="tag">Internacional</span><span class="tag">Comércio Exterior</span></div>
+    </div>
+    <a class="proj-card fade-up" href="https://www.clippings.me/users/salmacatherine" target="_blank">
+      <div class="proj-type">Portfólio completo</div>
+      <div class="proj-name">Clippings & Textos Publicados</div>
+      <div class="proj-desc">Acervo de textos publicados nas experiências profissionais e acadêmicas: artigos, releases, matérias e notas.</div>
+      <div class="proj-link">Ver portfólio →</div>
+    </a>
+  </div>
+</section>
+
+<!-- HABILIDADES + FORMAÇÃO -->
+<section style="background:white;max-width:100%;padding:5rem 0">
+  <div style="max-width:900px;margin:0 auto;padding:0 2rem">
+    <div class="section-header fade-up">
+      <span class="section-num">04</span>
+      <h2 class="section-title">Habilidades</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="skills-wrap fade-up">
+      <div class="skill-group">
+        <div class="skill-group-title">Redação & apuração</div>
+        <ul class="skill-list"><li>Hard news e notícias frias</li><li>Releases e notas à imprensa</li><li>Artigos de opinião</li><li>Reportagens e entrevistas</li><li>Títulos com SEO</li><li>Apuração de campo</li><li>Verificação de dados</li></ul>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Produção de conteúdo</div>
+        <ul class="skill-list"><li>Roteiro de podcast</li><li>Produção e edição de vídeo</li><li>Conteúdo para redes sociais</li><li>WordPress</li><li>CapCut</li><li>Canva</li></ul>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Ferramentas profissionais</div>
+        <ul class="skill-list"><li>Press Manager / Comunique-se</li><li>Clipping e monitoramento</li><li>Google Workspace</li><li>Pacote Office</li><li>Relatórios e atas</li><li>Ferramentas de IA</li></ul>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Idiomas & perfil</div>
+        <ul class="skill-list"><li>Português (nativo)</li><li>Inglês avançado</li><li>Comunicação em câmera</li><li>Empática com fontes</li><li>Curiosidade investigativa</li><li>Trabalho em equipe</li></ul>
+      </div>
+    </div>
+    <div class="section-header fade-up" style="margin-top:4rem">
+      <span class="section-num">05</span>
+      <h2 class="section-title">Formação & cursos</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="edu-list">
+      <div class="edu-item fade-up"><div class="edu-year">2023 – 2027</div><div><div class="edu-name">Bacharelado em Jornalismo</div><div class="edu-inst">Universidade São Judas Tadeu · 6º semestre · noturno</div></div></div>
+      <div class="edu-item fade-up"><div class="edu-year">2026 · Em andamento</div><div><div class="edu-name">Covering Refugee Stories</div><div class="edu-inst">Al Jazeera</div></div></div>
+      <div class="edu-item fade-up"><div class="edu-year">Mar–Abr 2025</div><div><div class="edu-name">Como Ser um Correspondente Internacional</div><div class="edu-inst">Faculdade Cásper Líbero · Certificado</div></div></div>
+      <div class="edu-item fade-up"><div class="edu-year">USJT</div><div><div class="edu-name">Como Fazer Negócios com a China</div><div class="edu-inst">Extensão · Geopolítica e economia internacional</div></div></div>
+      <div class="edu-item fade-up"><div class="edu-year">Fiquem Sabendo</div><div><div class="edu-name">Vozes de Impacto</div><div class="edu-inst">Formação para mulheres comunicadoras</div></div></div>
+      <div class="edu-item fade-up"><div class="edu-year">2022–2023</div><div><div class="edu-name">Estilismo e Coordenação de Moda</div><div class="edu-inst">SENAC São Paulo · Técnico integrado</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEXTOS -->
+<section id="textos">
+  <div class="section-header fade-up">
+    <span class="section-num">06</span>
+    <h2 class="section-title">Textos</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="clips-list">
+    <div class="clip-item fade-up" onclick="openModal('m-livros')"><div class="clip-left"><div class="clip-title">Em tempos de guerra, distribuir livros é uma política de Estado</div><div class="clip-excerpt">Sobre o MEC Livros e o papel da leitura como ato civilizatório em tempos de radicalização.</div></div><div class="clip-right"><span class="clip-source">Artigo · LinkedIn</span><span class="clip-read">Ler →</span></div></div>
+    <div class="clip-item fade-up" onclick="openModal('m-taboca')"><div class="clip-left"><div class="clip-title">A venda da Mineração Taboca à China e suas implicações estratégicas para o Brasil</div><div class="clip-excerpt">Análise sobre a venda da mina de Pitinga (AM) a uma estatal chinesa e os riscos à soberania nacional.</div></div><div class="clip-right"><span class="clip-source">Artigo</span><span class="clip-read">Ler →</span></div></div>
+    <div class="clip-item fade-up" onclick="openModal('m-seita')"><div class="clip-left"><div class="clip-title">A mulher e a seita: sob o disfarce de fé, uma história de abuso e tragédia em Manaus</div><div class="clip-excerpt">Morte de Didjia Cardoso, destaque do Festival de Parintins, expõe práticas criminosas de grupo religioso.</div></div><div class="clip-right"><span class="clip-source">Reportagem</span><span class="clip-read">Ler →</span></div></div>
+    <div class="clip-item fade-up" onclick="openModal('m-pulseira')"><div class="clip-left"><div class="clip-title">Pulseira milenar de faraó é roubada de museu no Egito e derretida</div><div class="clip-excerpt">Artefato de 3.000 anos pertencente ao faraó Amenemope desapareceu durante preparação de exposição.</div></div><div class="clip-right"><span class="clip-source">Hard news · AppNews</span><span class="clip-read">Ler →</span></div></div>
+    <div class="clip-item fade-up" onclick="openModal('m-jamie')"><div class="clip-left"><div class="clip-title">Atriz Jamie Lee Curtis compartilha desespero com incêndios em Los Angeles: "Sem palavras"</div><div class="clip-excerpt">Relato da atriz sobre a devastação causada pelos incêndios que atingiram sua comunidade em LA.</div></div><div class="clip-right"><span class="clip-source">AppNews · Jan 2025</span><span class="clip-read">Ler →</span></div></div>
+    <div class="clip-item fade-up" onclick="openModal('m-loreal')"><div class="clip-left"><div class="clip-title">Alunos da São Judas Tadeu realizam ação gratuita com Instituto L'Oréal em apoio ao Outubro Rosa</div><div class="clip-excerpt">Iniciativa arrecadou cabelos para confecção de perucas destinadas a mulheres em tratamento oncológico.</div></div><div class="clip-right"><span class="clip-source">Boletim USJT · Out 2024</span><span class="clip-read">Ler →</span></div></div>
+    <div class="clip-item fade-up" onclick="openModal('m-unidown')"><div class="clip-left"><div class="clip-title">Instituto UniDown realiza aula de gastronomia com a vencedora do MasterChef 2022, Lays Fernandes</div><div class="clip-excerpt">Aula inclusiva e gratuita no Mercadão de São Paulo para jovens com síndrome de Down.</div></div><div class="clip-right"><span class="clip-source">Release · Vervi Assessoria</span><span class="clip-read">Ler →</span></div></div>
+    <div class="clip-item fade-up" onclick="openModal('m-fluid')"><div class="clip-left"><div class="clip-title">Fluid Feeder atualiza sua certificação internacional de qualidade ISO 9001</div><div class="clip-excerpt">Empresa de tratamento de água requalifica certificação após auditoria intensa de quatro dias.</div></div><div class="clip-right"><span class="clip-source">Release · Vervi Assessoria</span><span class="clip-read">Ler →</span></div></div>
+    <div class="clip-item fade-up" onclick="openModal('m-moda')"><div class="clip-left"><div class="clip-title">Festas de fim de ano: estilista 70+ dá 5 dicas de como mulheres da terceira idade podem arrasar nos looks</div><div class="clip-excerpt">Sugestões de looks e combinações para as festividades com muito conforto e estilo.</div></div><div class="clip-right"><span class="clip-source">Release · Vervi Assessoria</span><span class="clip-read">Ler →</span></div></div>
+  </div>
+  <a class="clips-more fade-up" href="https://www.clippings.me/users/salmacatherine" target="_blank">Ver portfólio com mais textos →</a>
+</section>
+
+<!-- CONTATO -->
+<div class="contact-section" id="contato">
+  <div class="contact-inner">
+    <div class="section-header fade-up">
+      <span class="section-num" style="color:rgba(245,240,232,.4)">07</span>
+      <h2 class="section-title" style="color:var(--cream)">Vamos trabalhar juntos</h2>
+      <div class="section-rule" style="background:rgba(245,240,232,.1)"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-blurb fade-up">
+        <p>Estou em busca de <strong>oportunidades de estágio</strong> em jornalismo — TV, redação, assessoria de imprensa, comunicação institucional, veículos digitais ou cobertura de temas internacionais e econômicos.</p>
+        <br>
+        <p>Tenho <strong>disponibilidade imediata</strong> para trabalhos em São Paulo ou remoto (global).</p>
+      </div>
+      <div class="contact-links fade-up">
+        <a class="contact-link" href="mailto:cecconisalma@gmail.com"><div class="contact-link-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div><div><span class="contact-link-label">E-mail</span><span class="contact-link-value">cecconisalma@gmail.com</span></div></a>
+        <a class="contact-link" href="https://www.linkedin.com/in/salma-catherine-a-cecconi/" target="_blank"><div class="contact-link-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div><div><span class="contact-link-label">LinkedIn</span><span class="contact-link-value">salma-catherine-a-cecconi</span></div></a>
+        <a class="contact-link" href="tel:+5511970718854"><div class="contact-link-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.59 3.36 2 2 0 0 1 3.55 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.69a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><span class="contact-link-label">Telefone</span><span class="contact-link-value">(11) 97071-8854</span></div></a>
+        <a class="contact-link" href="Salma_Cecconi_Curriculo.pdf" download><div class="contact-link-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="12" x2="12" y2="18"/><polyline points="9 15 12 18 15 15"/></svg></div><div><span class="contact-link-label">Currículo</span><span class="contact-link-value">Baixar PDF →</span></div></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer><p>Salma Catherine A. Cecconi · São Bernardo do Campo, SP · 2026</p></footer>
+
+<!-- ══════ MODAIS — TEXTOS COMPLETOS ══════ -->
+
+<div class="modal-overlay" id="m-livros" onclick="closeOnOverlay(event,'m-livros')">
+<div class="modal"><button class="modal-close" onclick="closeModal('m-livros')">×</button>
+<div class="modal-meta">Artigo · LinkedIn · 2026</div>
+<div class="modal-title">Em tempos de guerra, distribuir livros é uma política de Estado</div>
+<div class="modal-author">Por Salma Cecconi</div>
+<div class="modal-body">
+<p>Nos últimos dias, recebi uma notícia que me pareceu muito feliz — algo raro em tempos de guerras, ameaças nucleares e tensões diplomáticas: a criação do MEC Livros, uma iniciativa do Governo Federal que disponibiliza gratuitamente milhares de títulos em formato digital.</p>
+<p>A proposta se assemelha à lógica de uma biblioteca: o leitor escolhe um título, acessa por um período determinado e, ao final, devolve para poder pegar outro. Trata-se de uma ideia simples, mas profundamente simbólica, sobretudo em um País onde o livro muitas vezes é caro, distante e até restrito às classes que conseguem pagar pelo acesso à cultura.</p>
+<p>O anúncio da plataforma surge num momento em que o mundo volta a conviver com o vocabulário da guerra como se ele fosse inevitável: ameaças militares, disputas geopolíticas e discursos de "retaliação" e "resposta" dominam o debate público. Não se trata apenas de um cenário de conflito armado, mas também de um contexto de endurecimento social e político, no qual a polarização ganha terreno e o pensamento crítico se torna cada vez mais disputado.</p>
+<p>É justamente por isso que políticas públicas de leitura não deveriam ser tratadas como iniciativas secundárias, meramente administrativas ou decorativas. Em sociedades democráticas, ampliar o acesso ao livro é mais do que um gesto cultural — é um investimento direto em cidadania.</p>
+<p>Ler é uma forma de educação contínua. É o contato com outras experiências humanas, outros modos de interpretar o mundo, outras linguagens e sensibilidades. E, acima de tudo, é uma prática que exige tempo, atenção e silêncio — algo cada vez mais difícil em uma era marcada pela aceleração, pela fragmentação da informação e pela disputa constante por engajamento.</p>
+<p>No Brasil, a desigualdade no acesso ao livro é histórica. Embora programas públicos tenham existido em diferentes momentos, o mercado editorial ainda opera sob uma lógica de preços elevados, distribuição desigual e concentração geográfica. Bibliotecas públicas seguem subfinanciadas, e escolas muitas vezes enfrentam carências básicas que tornam o incentivo à leitura uma tarefa difícil. Nesse contexto, o MEC Livros pode representar um passo importante: não apenas por disponibilizar obras, mas por reafirmar uma visão de Estado em que o conhecimento é entendido como bem público, e não como privilégio.</p>
+<p>Essa discussão não é apenas sobre cultura. É sobre democracia. O jornalismo, por exemplo, depende diretamente de repertório. A leitura amplia vocabulário, capacidade argumentativa e compreensão de complexidades sociais. O mesmo vale para qualquer cidadão que busca participar de debates públicos com mais autonomia e menos submissão às narrativas prontas. Quando o acesso à leitura se amplia, amplia-se também a capacidade de uma sociedade resistir à desinformação e aos discursos que simplificam o mundo em inimigos e aliados.</p>
+<p>A literatura, em particular, tem um papel ainda mais profundo: ela humaniza. Ela ensina sobre o outro, e até sobre nós mesmos. Em tempos de radicalização e violência, isso não é detalhe — é antídoto.</p>
+<p>Italo Calvino, escritor e jornalista italiano, escreveu em seu livro "Se um viajante numa noite de inverno" que "Ler é ir ao encontro de algo que está para ser e ninguém sabe ainda o que será." Toda sociedade que lê constrói possibilidades de futuro. E toda sociedade que desinveste em leitura reduz sua própria capacidade de imaginar alternativas.</p>
+<p>Não é por acaso que regimes autoritários, ao longo da história, atacaram livros, escritores e bibliotecas. O controle sobre a cultura é sempre uma tentativa de controle sobre o pensamento. Heinrich Heine, em 1821, antecipou esse processo com uma frase que atravessou os séculos: "Onde se queimam livros, cedo ou tarde se queimam homens." A imagem é cruel, mas permanece atual. Quando a educação perde centralidade e o conhecimento deixa de ser prioridade, o espaço é ocupado por intolerância e brutalidade. A violência começa antes das bombas: começa quando a palavra é desvalorizada e a reflexão se torna dispensável.</p>
+<p>Por isso, em um mundo que volta a se acostumar com a guerra e suas narrativas como normalidade, iniciativas de democratização do acesso ao livro devem ser tratadas como escolhas sérias. Elas não resolvem conflitos internacionais nem substituem políticas econômicas, mas reafirmam algo essencial: a ideia de que uma sociedade se fortalece quando seu povo lê. Distribuir livros não é apenas um gesto cultural. É um gesto civilizatório.</p>
+</div></div></div>
+
+<div class="modal-overlay" id="m-taboca" onclick="closeOnOverlay(event,'m-taboca')">
+<div class="modal"><button class="modal-close" onclick="closeModal('m-taboca')">×</button>
+<div class="modal-meta">Artigo</div>
+<div class="modal-title">A venda da Mineração Taboca à China e suas implicações estratégicas para o Brasil</div>
+<div class="modal-author">Por Salma Cecconi</div>
+<div class="modal-body">
+<p>A relação comercial entre o Brasil e a China, que completa 50 anos, é marcada por uma parceria sólida que tem gerado valor significativo para ambos os países. Desde 2009, a China é o maior parceiro comercial do Brasil, e o intercâmbio entre as nações cresceu de US$ 6,6 bilhões em 2003 para impressionantes US$ 157,5 bilhões em 2023. Segundo Olívia Bulla, no Valor Econômico, apenas neste ano, até outubro, essa corrente comercial trouxe ao Brasil um superávit de US$ 30,9 bilhões.</p>
+<p>A venda da Mineração Taboca, no final de novembro de 2024, em Presidente Figueiredo, Amazonas, à empresa estatal chinesa China Nonferrous Trade Co. Ltd. (CNT) destaca-se como um marco que vai além dos números financeiros. A Mina de Pitinga, onde opera a Taboca, é uma das reservas poliminerais mais valiosas do mundo, com depósitos de estanho, nióbio, tântalo, terras raras e até resíduos de urânio. Essa transação não é apenas um evento econômico, mas um movimento estratégico que precisa ser analisado com cautela.</p>
+<p>O interesse da China na Taboca não se limita ao estanho, mas principalmente aos rejeitos acumulados ao longo de décadas. Segundo os dados da China Association of Automobile Manufacturers (CAAM), a China se consolidou como o maior fabricante e mercado de veículos do mundo, com 30 milhões de unidades produzidas e praticamente o mesmo número de vendas internas em 2023, sendo 8,1 milhões de veículos elétricos e híbridos.</p>
+<p>Esses rejeitos da Taboca contêm minerais estratégicos como ítrio, um elemento essencial para as baterias de carros elétricos, além de outros metais críticos para a indústria tecnológica global.</p>
+<p>A China, líder na tecnologia de separação e beneficiamento de terras raras, tem agora uma oportunidade única de explorar um mercado altamente lucrativo. Enquanto isso, o Brasil, dono da terceira maior reserva de terras raras do mundo, continua com uma produção extremamente baixa devido à falta de tecnologia e investimentos no setor.</p>
+<p>Não podemos subestimar o papel estratégico de minerais como nióbio e terras raras. Eles são vitais para baterias recarregáveis, superímãs e até sistemas de defesa militar. Com o avanço da tecnologia, especialmente na transição para energias limpas, esses recursos tornam-se cada vez mais valiosos.</p>
+<p>Entretanto, o impacto da venda da Taboca não se limita à economia. O urânio, encontrado em Pitinga, é um recurso cuja exploração está constitucionalmente restrita ao Estado brasileiro. Ainda que as concentrações atuais não sejam comerciais, os avanços tecnológicos podem mudar esse cenário, colocando em risco a soberania sobre um material tão sensível.</p>
+<p>O governo brasileiro precisa urgentemente criar políticas claras de fiscalização e tributação para garantir que esses rejeitos não sejam exportados como matéria-prima sem beneficiamento. Permitir que riquezas estratégicas sejam tratadas como subprodutos e exportadas sem controle adequado seria uma perda irreparável.</p>
+<p>O governo do Amazonas e o governo federal não podem se limitar a comemorar o investimento estrangeiro. É crucial investigar e monitorar de perto as operações da nova empresa para proteger os interesses nacionais. A atuação do Ministério Público Federal também deve ser mais incisiva, considerando a importância estratégica dos recursos de Pitinga.</p>
+<p>Em um cenário global onde a competição por minerais estratégicos se intensifica, o Brasil não pode se dar ao luxo de agir com passividade. A venda da Mineração Taboca é mais do que uma transação comercial: é um alerta sobre como o País deve gerenciar suas riquezas naturais em benefício das futuras gerações. Os recursos de Pitinga pertencem ao povo brasileiro, e sua exploração deve ser conduzida de forma a maximizar os benefícios econômicos e estratégicos para o Brasil.</p>
+</div></div></div>
+
+<div class="modal-overlay" id="m-seita" onclick="closeOnOverlay(event,'m-seita')">
+<div class="modal"><button class="modal-close" onclick="closeModal('m-seita')">×</button>
+<div class="modal-meta">Reportagem</div>
+<div class="modal-title">A mulher e a seita: sob o disfarce de fé, uma história de abuso, manipulação e tragédia</div>
+<div class="modal-author">Por Salma Cecconi</div>
+<div class="modal-body">
+<p>Sinhazinha linda, sinhazinha bela — é o que canta o mestre da noite, ecoando a cultura, a terra e a memória de Parintins. Vestida de vermelho, Dilemar Cardoso Carlos da Silva — ou Didjia Cardoso, como era conhecida — descia do carro alegórico como uma figura mística do Festival de Parintins. Essa mesma sinhazinha do Boi Garantido que, no dia 28 de maio de 2024, aos 32 anos, foi encontrada morta em sua casa, em Manaus, vítima de uma possível overdose de cetamina.</p>
+<p>Segundo a investigação policial, a família de Didjia — os Cardoso — eram responsáveis pela criação de uma seita religiosa e criminosa chamada Pai, Mãe e Vida. O grupo promovia rituais nos quais o uso de substâncias como cetamina e potenay eram incentivadas para "transcender a outra dimensão". As práticas da seita envolviam abusos: vítimas vulneráveis eram obrigadas a permanecer nuas, sem poder tomar banho ou se alimentar. Os rituais aconteciam em uma casa da família, em Manaus, conforme reportagem exibida pelo programa Fantástico (TV Globo).</p>
+<p>Dentro da seita, Ademar Farias Cardoso Neto, irmão de Didjia, assumia o papel de Jesus; Cleusimar Cardoso, a mãe, encarnava Maria, mãe de Cristo; e Didjia representava Maria Madalena. Foi em um desses rituais que ela faleceu.</p>
+<p>Cleomar Cardoso, tia de Didjia, acusou os demais integrantes da seita de negar socorro à sobrinha e de fomentar seu vício em drogas. Ademar, de 29 anos, e Cleusimar, líderes do grupo, foram indiciados por uma série de crimes, entre eles aborto induzido sem consentimento, estupro de vulnerável, sequestro, cárcere privado e colocar em risco a saúde de terceiros.</p>
+<p>Uma das vítimas, ex-companheira de Ademar, de 27 anos, relatou que foi aliciada para entrar na seita e começou a usar cetamina sob influência dele. Segundo o inquérito, há indícios de que ela sofreu um aborto dentro da casa devido ao uso forçado da droga.</p>
+</div></div></div>
+
+<div class="modal-overlay" id="m-pulseira" onclick="closeOnOverlay(event,'m-pulseira')">
+<div class="modal"><button class="modal-close" onclick="closeModal('m-pulseira')">×</button>
+<div class="modal-meta">Hard news · AppNews</div>
+<div class="modal-title">Pulseira milenar de faraó é roubada de museu no Egito e derretida</div>
+<div class="modal-author">Por Salma Cecconi</div>
+<div class="modal-body">
+<p>O ministro do Turismo e Antiguidades do Egito, Sherif Fathy, anunciou no sábado (20) que a pulseira de 3.000 anos que pertencia ao faraó Amenemope foi roubada em 9 de setembro do famoso Museu Egípcio do Cairo, enquanto funcionários preparavam artefatos para uma exposição na Itália, e posteriormente foi derretida.</p>
+<p>A declaração televisionada gerou uma onda de indignação por parte dos egípcios, porque além de se tratar de um tesouro milenar, há grande respeito e estima pela antiga herança cultural daquela nação.</p>
+<p>A pulseira continha uma pedra de lápis-lazúli e pertenceu ao faraó Amenemope, que reinou há cerca de 3.000 anos, e escreveu um dos mais conhecidos exemplos da filosofia ética egípcia antiga, a Instrução de Amenemope.</p>
+<h3>Local não possuía câmeras</h3>
+<p>Autoridades disseram que o artefato foi retirado de um laboratório de restauração do museu, e levado a uma rede de revendedores antes de ser derretido. O ministro ainda declarou que o laboratório não possuía câmeras de segurança.</p>
+<h3>Pulseira milenar foi vendida e derretida</h3>
+<p>Quatro suspeitos foram presos e interrogados. Entre os detidos, está um especialista em restauração do próprio museu, que confessou ter dado a pulseira a um conhecido dono de uma loja de prata no distrito de Sayyeda Zainab, no Cairo.</p>
+<p>A pulseira teria sido vendida ao proprietário de uma oficina de ourivesaria por um valor equivalente de US$ 3.800 e revendida por cerca de US$ 4.000 a um trabalhador de outra oficina de ourivesaria, que a derreteu para fazer novas joias de ouro.</p>
+<p>Os suspeitos confessaram o crime e o dinheiro foi apreendido, conforme informou o ministério em um comunicado na quinta-feira. Também foi divulgado um vídeo de uma câmera de segurança, onde mostra o dono de uma loja recebendo a pulseira, pesando e, em seguida, pagando um dos suspeitos.</p>
+<p>A mídia local noticiou no domingo que um juiz ordenou que o especialista em restauração e seu conhecido permanecessem detidos por mais 15 dias, até que tenham novas investigações. Os suspeitos restantes foram liberados mediante o pagamento de uma fiança fixada em 10.000 libras egípcias (US$ 207).</p>
+</div></div></div>
+
+<div class="modal-overlay" id="m-jamie" onclick="closeOnOverlay(event,'m-jamie')">
+<div class="modal"><button class="modal-close" onclick="closeModal('m-jamie')">×</button>
+<div class="modal-meta">Hard news · AppNews · Janeiro 2025</div>
+<div class="modal-title">Atriz Jamie Lee Curtis compartilha desespero com incêndios em Los Angeles: "Sem palavras"</div>
+<div class="modal-author">Por Salma Catherine, sob supervisão de Igor de Oliveira, do AppNews</div>
+<div class="modal-body">
+<p>A atriz e ativista norte-americana Jamie Lee Curtis, conhecida por sua atuação em produções como Sexta-Feira Muito Louca e Um Natal Muito, Muito Louco, utilizou suas redes sociais nesta quarta-feira (8), para relatar a devastação causada pelos incêndios florestais que atingem Los Angeles, nos Estados Unidos.</p>
+<p>Curtis publicou três registros em sua conta no Instagram, onde possui mais de 6 milhões de seguidores, mostrando a gravidade da situação em sua comunidade. Na primeira publicação, que traz a imagem de uma árvore em chamas, a atriz desabafou: "Minha comunidade e possivelmente minha casa estão em chamas. Minha família está segura. Muitos dos meus amigos perderão suas casas. Há tantos relatos conflitantes. Com toda a tecnologia, parece haver muito pouca informação. Por favor, compartilhem fatos! Isso ajudará quem está em dúvida. É uma situação aterrorizante, e sou grata aos bombeiros e a todos os bons samaritanos que estão ajudando as pessoas a sair do caminho do fogo..."</p>
+<p>Em outro vídeo compartilhado horas depois, Curtis mostra a destruição deixada pelas chamas em sua vizinhança. Na legenda, ela lamentou: "Nosso amado bairro se foi. Nossa casa está segura. Tantas outras pessoas perderam tudo. Ajude onde puder. Obrigada aos socorristas e bombeiros."</p>
+<p>A última publicação traz imagens ainda mais chocantes, acompanhadas de uma legenda breve: "Sem palavras."</p>
+<p>Segundo o Associated Press, os Incêndios florestais estão devastando Los Angeles. Muitos dos incêndios gigantescos começaram na terça-feira e foram alimentados pelos ventos de Santa Ana, que atingiram rajadas de mais de 70 mph (112 km/h) em alguns pontos.</p>
+</div></div></div>
+
+<div class="modal-overlay" id="m-loreal" onclick="closeOnOverlay(event,'m-loreal')">
+<div class="modal"><button class="modal-close" onclick="closeModal('m-loreal')">×</button>
+<div class="modal-meta">Boletim · USJT · Outubro 2024</div>
+<div class="modal-title">Alunos da São Judas Tadeu, na Mooca, em parceria com o Instituto L'Oréal, realizam ação gratuita em apoio ao Outubro Rosa</div>
+<div class="modal-author">Por Salma Cecconi</div>
+<div class="modal-body">
+<p>A ação contou com cortes de cabelo gratuitos para a confecção de perucas destinadas a mulheres em tratamento contra o câncer de mama.</p>
+<p>A Atlética de Comunicação Social e Artes (Coelho) da Universidade São Judas Tadeu, em parceria com voluntários do Instituto L'Oréal, realizaram nos dias 21, 22 e 24 de outubro uma ação solidária gratuita de cortes de cabelo. A iniciativa teve como objetivo arrecadar fios para a confecção de perucas e, assim, apoiar as mulheres que estão enfrentando o câncer de mama.</p>
+<p>O Outubro Rosa é uma campanha que, há três décadas, alerta sobre a importância do diagnóstico precoce. Segundo o Instituto Nacional de Câncer (INCA), devem ser registrados no Brasil 73.610 novos casos de câncer de mama entre 2023 e 2025. Isso representa uma taxa de incidência de 41,89 casos por 100.000 mulheres.</p>
+<p>Além da arrecadação de cabelos, a ação visou sensibilizar e educar a comunidade acadêmica sobre a prevenção e cuidado com a saúde feminina. A líder e organizadora da iniciativa, Raquel Verderosi, contou mais detalhes: "Essa é uma campanha que a Coelho faz todos os anos. A gente conversa muito com as mulheres, ano passado, a gente conheceu uma mulher que estava em remissão do câncer de mama e ficou muito emocionada. Tem atleticanas que já rasparam o cabelo todo para doar".</p>
+</div></div></div>
+
+<div class="modal-overlay" id="m-unidown" onclick="closeOnOverlay(event,'m-unidown')">
+<div class="modal"><button class="modal-close" onclick="closeModal('m-unidown')">×</button>
+<div class="modal-meta">Release · Vervi Assessoria</div>
+<div class="modal-title">Instituto UniDown realiza aula de gastronomia gratuita com a vencedora do MasterChef 2022, Lays Fernandes, no Mercadão de São Paulo</div>
+<div class="modal-author">Por Salma Cecconi</div>
+<div class="modal-body">
+<p>Chef Lays Fernandes ensinará pratos deliciosos em uma aula descontraída e rica de sabor e aprendizado, tendo como alunos 10 jovens com síndrome de Down.</p>
+<p>O Instituto UniDown realizará aula gratuita de gastronomia para pessoas com síndrome de Down, dia 26 de outubro, sábado, das 13h às 15h, no Espaço de Gastronomia e Cultura do Mercado Municipal de São Paulo. A chef Lays Fernandes, ganhadora do MasterChef 2022, ministrará aula, visando a inclusão e capacitação de pessoas na condição genética T21. A chef Lays Fernandes ensinará pratos deliciosos.</p>
+<p>Desde 2006, Marcio, fundador do Instituto UniDown, organização sem fins lucrativos, busca instruir pessoas com T21 de todas as idades, mediante cursos, atividades, programações, iniciativas, para que tenham oportunidades significativas na sociedade. Destinada exclusivamente a pessoas com síndrome de Down a partir de 14 anos, a atividade visa proporcionar uma experiência culinária única e inclusiva. A aula é aberta ao público e as vagas são limitadas.</p>
+<p>Os interessados devem se inscrever previamente pelo WhatsApp do UniDown, no número (11) 9.9257-7352, onde receberão uma senha de participação.</p>
+<p><strong>Serviço:</strong> Local: Mercado Municipal de São Paulo — Endereço: R. da Cantareira, 306 - Centro Histórico de São Paulo, São Paulo – SP. Data: 26 de outubro (sábado). Horário: das 13h às 15h. Site: institutounidown.com.br — Instagram e Facebook: @institutounidown</p>
+</div></div></div>
+
+<div class="modal-overlay" id="m-fluid" onclick="closeOnOverlay(event,'m-fluid')">
+<div class="modal"><button class="modal-close" onclick="closeModal('m-fluid')">×</button>
+<div class="modal-meta">Release · Vervi Assessoria</div>
+<div class="modal-title">Fluid Feeder atualiza sua certificação internacional de qualidade ISO 9001</div>
+<div class="modal-author">Por Salma Cecconi</div>
+<div class="modal-body">
+<p>Empresa de tratamento de água e efluentes requalifica a certificação para continuar seu compromisso com a gestão eficiente.</p>
+<p>Empresa especialista em soluções para tratamento de água e efluentes, Fluid Feeder, atualiza sua certificação ISO 9001 – selo internacional que comprova a confiabilidade e qualidade de gestão de uma organização. A certificação ISO 9001, concedida pela International Organization for Standardization (ISO), é um dos principais padrões globais para sistemas de gestão de qualidade. O reconhecimento é concedido apenas a organizações que demonstram capacidade de fornecer produtos e serviços que atendam as expectativas dos clientes e os requisitos regulatórios aplicáveis, mantendo a melhoria contínua dos processos.</p>
+<p>"Essa recertificação é um motivo de grande orgulho para toda a equipe da Fluid Feeder. A auditoria foi intensa, com quatro dias de análise minuciosa de todos os nossos processos. Superar essa etapa com êxito demonstra o nosso comprometimento com a qualidade e a melhoria contínua", afirma Francisco Carlos Oliver, CEO da Fluid Feeder. A atualização ocorreu em junho por meio da auditoria certificadora Bureau Veritas.</p>
+<p>"A importância da certificação ISO 9001 vai além do reconhecimento interno. Muitas grandes empresas exigem que seus fornecedores possuam essa certificação, o que torna a Fluid Feeder uma parceira ainda mais atrativa no mercado. A ISO 9001 é um diferencial competitivo importante, pois demonstra aos nossos clientes que trabalhamos com os mais altos padrões de qualidade", complementa Oliver.</p>
+<p>Sobre a Fluid Feeder: fundada em 1997, com o objetivo de representar comercialmente a área de equipamentos e serviços para tratamento de água, a Fluid Feeder tem como foco o tratamento de água e de efluentes por meio de soluções personalizadas para medição, transferência e dosagem de produtos químicos sólidos, líquidos e gasosos. Com capital 100% nacional, a Fluid Feeder já atuou em empresas dos mais variados ramos, da indústria química à farmacêutica, da área têxtil ao setor de papel e celulose, sempre se destacando pela excelência no atendimento. Acesse: fluidfeeder.com.br</p>
+</div></div></div>
+
+<div class="modal-overlay" id="m-moda" onclick="closeOnOverlay(event,'m-moda')">
+<div class="modal"><button class="modal-close" onclick="closeModal('m-moda')">×</button>
+<div class="modal-meta">Release · Vervi Assessoria</div>
+<div class="modal-title">Festas de fim de ano: estilista 70+ dá 5 dicas de como mulheres da terceira idade podem arrasar nos looks</div>
+<div class="modal-author">Por Salma Cecconi</div>
+<div class="modal-body">
+<p>Sugestões de looks e combinações para as festividades. Inspire-se com muito conforto e estilo.</p>
+<p>O envelhecimento é uma realidade natural e inevitável do corpo humano. Se engana quem acha que a moda e a velhice não andam juntas, elas são parceiras inseparáveis. A mulher madura valoriza conforto e praticidade, sem abrir mão da sofisticação e do estilo. Pensando nisso, Suely Tonarque, estilista e ativista 70+, especialista em moda para a terceira idade, fundadora do ateliê Duda by Duda e autora de diversos livros voltados para pessoas idosas, compartilhou cinco dicas incríveis para mulheres 60+ brilharem nos looks de Natal e Ano Novo.</p>
+<h3>1. Tecidos leves e confortáveis</h3>
+<p>Escolher tecidos de qualidade e com um bom caimento faz toda a diferença. O Natal brasileiro é regado de sol, então Suely indica tecidos frescos como linho, crepe, seda, laise, ou até Chiffon, que valorizam o corpo com conforto e elegância.</p>
+<h3>2. Acessórios são a chave para o sucesso do look</h3>
+<p>Investir nos acessórios certos ajuda a dar aquele 'toque especial' no look com muita modernidade e estilo. Maxi colares, brincos discretos mas brilhantes, lenços, ou bolsas estruturadas podem transformar um look básico em algo especial. "Acessórios artesanais com pedras naturais também são extremamente elegantes e atemporais, além de apoiar pequenos artesões, você tem uma peça que durará diversas festividades."</p>
+<h3>3. Não tenha medo de explorar as cores</h3>
+<p>Talvez você seja do time que usa cores mais sóbrias ou a que ama cores chamativas, não importa, use isso a seu favor. "Tons como pérola, dourado, prateado, coral, azul ou verde são perfeitos para ocasiões festivas. Cores neutras também podem brilhar quando combinadas com detalhes metálicos ou pedrarias."</p>
+<h3>4. Aposte em peças atemporais com um toque moderno</h3>
+<p>"Vestidos, seja ele o modelo que for, sempre são peças-coringas, ter um bom vestido em seu guarda-roupa, faz com que você fique 'pronta em segundos' - ou quase isso. Se você quiser ousar, um conjunto confortável e elegante é ótima pedida. Se for do time das calças e blazers, vale a pena investir em alfaiatarias, batas elegantes também são práticas e estilosas."</p>
+<h3>5. Calçados: conforto e elegância podem andar juntos</h3>
+<p>"Apesar de culturalmente sermos condicionadas a usar saltos em datas festivas, entenda seu limite, se consegue sustentar um salto, use e abuse. Mas, utilizar um sapato baixo, como mules, sapatilhas ou até papetes metalizadas e brilhantes, com um design elegante, também oferece charme sem sacrificar a estabilidade e conforto."</p>
+<p><strong>Dica bônus: seja você mesma!</strong> "Pode parecer clichê, mas esse é um conceito poderoso. Seja para festas de fim de ano descontraídas e confortáveis ou eventos mais luxuosos e extravagantes, se vestir de acordo com sua essência é sempre a melhor escolha. A moda deve refletir quem você é. A moda é você." Portanto, você é livre para usar o que quiser e o que a faz se sentir bem, independentemente da idade. Todos os dias são oportunidades para brilhar.</p>
+</div></div></div>
+
+<script>
+// Fade up
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => { if(e.isIntersecting) setTimeout(()=>e.target.classList.add('visible'), i*80); });
+},{threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+
+// Modais
+function openModal(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden'}
+function closeModal(id){document.getElementById(id).classList.remove('open');document.body.style.overflow=''}
+function closeOnOverlay(e,id){if(e.target===e.currentTarget)closeModal(id)}
+
+// Menu mobile
+function openMenu(){document.getElementById('mobOverlay').classList.add('open');document.getElementById('mobDrawer').classList.add('open');document.body.style.overflow='hidden'}
+function closeMenu(){document.getElementById('mobOverlay').classList.remove('open');document.getElementById('mobDrawer').classList.remove('open');document.body.style.overflow=''}
+
+// ESC
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    document.querySelectorAll('.modal-overlay.open').forEach(m=>m.classList.remove('open'));
+    closeMenu();
+    document.body.style.overflow='';
+  }
+});
+</script>
+</body>
+</html>
